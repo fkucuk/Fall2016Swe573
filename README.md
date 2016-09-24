@@ -1,2 +1,3 @@
-# Fall2016Swe573
-This repository is for the course SWE 573 taken at Bogazici University in Fall 2016
+# Fatih Kucuk -  Fall 2016 SWE573
+
+This repository will contain all the info, activity done for this course.
