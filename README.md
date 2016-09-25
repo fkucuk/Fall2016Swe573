@@ -4,4 +4,4 @@ This repository will contain all the info, activity done for this course.
 
 ## Tracking Work
 
-All the work done will be tracked and logged in a google spreadsheet. The file is available [here](https://docs.google.com/spreadsheets/d/1ZGhhn08OOr6L22AES1zlW8FuRyUKgFMCmksnLoNtfR0/pubhtml "Google Spreadsheet").
+All the work done will be tracked and logged in a google spreadsheet. The file is available [here](https://docs.google.com/spreadsheets/d/1ZGhhn08OOr6L22AES1zlW8FuRyUKgFMCmksnLoNtfR0/edit?usp=sharing "Google Spreadsheet").
