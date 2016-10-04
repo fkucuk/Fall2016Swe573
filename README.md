@@ -1,6 +1,10 @@
-# Fatih Kucuk -  Fall 2016 SWE573
+# FAT App (Food & Activity Tracking Application)
+## Fatih Kucuk -  Fall 2016 SWE573
 
-This repository will contain all the info, activity done for this course.
+This repository contains (and shall contain) all the information about the application developing during the Software Development Practive course. Main purpose of this application is (will) to log an individual's activities and food consumption, and makes calorie calculations.
+
+## Wiki
+All detailed information will be available on this repository's wiki.
 
 ## Tracking Work
 
