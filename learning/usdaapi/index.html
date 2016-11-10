@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app="demo">
+	<head>
+		<title>Hello AngularJS</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    	<script src="script.js"></script>
+	</head>
+
+	<body>
+		<div ng-controller="Hello">
+		<input ng-model="searchKeywordk">
+		<button ng-click="setUrl(searchKeywordk)">Tıkla</button>
+		
+		<table border="1px">
+		<tr ng-repeat="d in greeting.list.item">
+			<td>{{d.name}}</td>
+		</tr>
+		</table>
+
+		</div>
+	</body>
+</html>
