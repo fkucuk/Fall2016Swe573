@@ -100,7 +100,7 @@ public class ActivityRepositoryStub implements ActivityRepository {
 		activity1.setDuration(55);
 		
 		User user = new User();
-		user.setId("5678");
+		user.setId(5678);
 		user.setName("Bryan");
 		
 		activity1.setUser(user);

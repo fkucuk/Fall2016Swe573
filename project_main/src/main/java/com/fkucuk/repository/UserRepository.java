@@ -5,6 +5,9 @@ import com.fkucuk.model.Activity;
 import com.fkucuk.model.Meal;
 import com.fkucuk.model.User;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.List;
 
 /**
@@ -12,11 +15,16 @@ import java.util.List;
  */
 public class UserRepository implements IUserRepository {
 
-
+    EntityManagerFactory emFactory = Persistence.createEntityManagerFactory("NewPersistenceUnit");
+    EntityManager entityManager = emFactory.createEntityManager();
 
     @Override
     public User createUser(User user) {
-        return null;
+
+        entityManager.getTransaction().begin();
+        entityManager.persist(user);
+        entityManager.getTransaction().commit();
+        return user;
     }
 
     @Override
