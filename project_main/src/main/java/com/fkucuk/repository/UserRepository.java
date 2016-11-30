@@ -4,6 +4,7 @@ import com.fkucuk.domain.interfaces.repository.IUserRepository;
 import com.fkucuk.model.Activity;
 import com.fkucuk.model.Meal;
 import com.fkucuk.model.User;
+import com.fkucuk.model.UserEntity;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -20,6 +21,11 @@ public class UserRepository implements IUserRepository {
 
     @Override
     public User createUser(User user) {
+
+        UserEntity ue = new UserEntity();
+        ue.setName(user.getName());
+        ue.setHeight(user.getHeight());
+        ue.setWeight(user.getWeight());
 
         entityManager.getTransaction().begin();
         entityManager.persist(user);

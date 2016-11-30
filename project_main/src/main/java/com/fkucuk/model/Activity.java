@@ -10,8 +10,7 @@ public class Activity {
 	private String description;
 	private int duration;
 	private User user;
-	
-	
+
 	public User getUser() {
 		return user;
 	}
@@ -37,7 +36,5 @@ public class Activity {
 	public void setDuration(int duration) {
 		this.duration = duration;
 	}
-	
-	
-	
+
 }

@@ -4,9 +4,6 @@ import com.fkucuk.model.User;
 import org.junit.Assert;
 import org.junit.Test;
 
-/**
- * Created by FATIH.KUCUK on 30.11.2016.
- */
 public class UserRepositoryTest {
 
     @Test
