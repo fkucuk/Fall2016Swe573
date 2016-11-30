@@ -3,6 +3,7 @@ package com.fkucuk.domain.interfaces.repository;
 import com.fkucuk.model.Activity;
 import com.fkucuk.model.Meal;
 import com.fkucuk.model.User;
+import com.fkucuk.model.UserEntity;
 
 import java.util.List;
 
@@ -21,4 +22,8 @@ public interface IUserRepository {
     void addUserActivity(int userId, Activity activity);
 
     List<Meal> getUserMeals(int userId, int startDate, int endDate);
+
+    User getUserByEmail(String email);
+
+    boolean authenticate(String username, String password);
 }

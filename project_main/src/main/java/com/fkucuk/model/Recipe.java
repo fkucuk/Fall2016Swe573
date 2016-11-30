@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Created by FATIH.KUCUK on 30.11.2016.
  */
-public class Recipie {
+public class Recipe {
 
     public String getName() {
         return name;

@@ -1,8 +1,6 @@
 package com.fkucuk.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.xml.bind.annotation.XmlRootElement;
+
 import java.util.Date;
 import java.util.List;
 
@@ -10,7 +8,7 @@ import java.util.List;
 
 public class User {
 
-	private int id;
+	private int userId;
 	private String name;
 	private String surname;
 	private String email;
@@ -18,6 +16,16 @@ public class User {
 	private float weight;
 	private float height;
 	private Date birthDate;
+	private List<Meal> meals;
+	private List<Activity> activities;
+
+	public int getUserId() {
+		return userId;
+	}
+
+	public void setUserId(int userId) {
+		this.userId = userId;
+	}
 
 	public List<Meal> getMeals() {
 		return meals;
@@ -33,17 +41,6 @@ public class User {
 
 	public void setActivities(List<Activity> activities) {
 		this.activities = activities;
-	}
-
-	private List<Meal> meals;
-	private List<Activity> activities;
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public String getName() {
