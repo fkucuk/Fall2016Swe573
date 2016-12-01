@@ -2,8 +2,6 @@
 <persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
 
     <persistence-unit name="NewPersistenceUnit">
-        <class>com.fkucuk.model.TestEntity</class>
-        <class>com.fkucuk.model.UserEntity</class>
         <properties>
             <property name="javax.persistence.jdbc.url"
                       value="jdbc:sqlite:C:/Users/fatih.kucuk/dev/workspace/Fall2016Swe573/project_main/fatapp.sqlite"/>

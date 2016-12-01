@@ -16,8 +16,6 @@ public class User {
 	private float weight;
 	private float height;
 	private Date birthDate;
-	private List<Meal> meals;
-	private List<Activity> activities;
 
 	public int getUserId() {
 		return userId;
@@ -25,22 +23,6 @@ public class User {
 
 	public void setUserId(int userId) {
 		this.userId = userId;
-	}
-
-	public List<Meal> getMeals() {
-		return meals;
-	}
-
-	public void setMeals(List<Meal> meals) {
-		this.meals = meals;
-	}
-
-	public List<Activity> getActivities() {
-		return activities;
-	}
-
-	public void setActivities(List<Activity> activities) {
-		this.activities = activities;
 	}
 
 	public String getName() {

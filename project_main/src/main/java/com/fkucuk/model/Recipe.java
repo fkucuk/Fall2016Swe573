@@ -7,6 +7,9 @@ import java.util.List;
  */
 public class Recipe {
 
+    private String name;
+    private List<Food> foods;
+
     public String getName() {
         return name;
     }
@@ -22,9 +25,6 @@ public class Recipe {
     public void setFoods(List<Food> foods) {
         this.foods = foods;
     }
-
-    private String name;
-    private List<Food> foods;
 
 }
 

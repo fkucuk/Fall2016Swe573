@@ -9,7 +9,7 @@ public class Meal {
     private MealType mealType;
     private String name;
     private List<Food> food;
-    private List<Recipe> recipies;
+    private List<Recipe> recipes;
 
     public String getName() {
         return name;
@@ -27,12 +27,12 @@ public class Meal {
         this.food = food;
     }
 
-    public List<Recipe> getRecipies() {
-        return recipies;
+    public List<Recipe> getRecipes() {
+        return recipes;
     }
 
-    public void setRecipies(List<Recipe> recipies) {
-        this.recipies = recipies;
+    public void setRecipes(List<Recipe> recipes) {
+        this.recipes = recipes;
     }
 
     public MealType getMealType() {

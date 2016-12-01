@@ -6,6 +6,7 @@ package com.fkucuk.model;
 public class Food {
 
     private int id;
+    private String name;
 
     public int getId() {
         return id;
@@ -22,7 +23,5 @@ public class Food {
     public void setName(String name) {
         this.name = name;
     }
-
-    private String name;
 
 }

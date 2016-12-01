@@ -12,7 +12,7 @@ import javax.ws.rs.core.Response;
 @Path("auth")
 public class AuthenticationResource {
 
-    private IUserRepository userRepository = new UserRepository();
+    private UserRepository userRepository = new UserRepository();
 
 
     @POST

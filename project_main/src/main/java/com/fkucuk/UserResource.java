@@ -17,7 +17,7 @@ import java.util.List;
 @Path("users") //http:localhost:8080/exercise-services/webapi/users
 public class UserResource {
 
-    private IUserRepository userRepository = new UserRepository();
+    private UserRepository userRepository = new UserRepository();
 
     @POST
     public User createUser(User user){
