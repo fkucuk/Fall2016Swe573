@@ -1,5 +1,6 @@
 package com.fkucuk.model;
 
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -8,8 +9,17 @@ import java.util.List;
 public class Meal {
     private MealType mealType;
     private String name;
+    private int mealDay;
     private List<Food> food;
     private List<Recipe> recipes;
+
+    public int getMealDay() {
+        return mealDay;
+    }
+
+    public void setMealDay(int mealDay) {
+        this.mealDay = mealDay;
+    }
 
     public String getName() {
         return name;

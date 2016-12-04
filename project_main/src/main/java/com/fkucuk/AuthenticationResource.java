@@ -43,7 +43,7 @@ public class AuthenticationResource {
     }
 
     private String issueToken(String email) {
-        return Integer.toString( userRepository.getUserByEmail(email).getUserId());
+        return Long.toString( userRepository.getUserByEmail(email).getUserId());
     }
 
 }

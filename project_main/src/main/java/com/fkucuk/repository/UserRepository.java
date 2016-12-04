@@ -1,12 +1,10 @@
 package com.fkucuk.repository;
 
-import com.fkucuk.domain.interfaces.repository.IUserRepository;
 import com.fkucuk.model.Activity;
 import com.fkucuk.model.Meal;
 import com.fkucuk.model.User;
+import org.sql2o.Connection;
 
-import java.time.Instant;
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -15,25 +13,71 @@ import java.util.List;
 public class UserRepository {
 
     public User createUser(User user) {
-        //TODO: implement
-        user.setUserId(123);
+        String sql = "INSERT INTO USER (email, name, password, isActive, weight, height)" +
+                "VALUES (:email,:name,:password, :isActive,:weight,:height)";
+
+        try (Connection con = DbHelper.getSql2o().open()){
+
+            Long insertedId = con.createQuery(sql)
+                    .addParameter("email", user.getEmail())
+                    .addParameter("name", user.getName())
+                    .addParameter("password", user.getPassword())
+                    .addParameter("isActive", user.isActive())
+                    .addParameter("weight", user.getWeight())
+                    .addParameter("height", user.getHeight())
+                    .executeUpdate()
+                    .getKey(Long.class);
+            user.setUserId(insertedId);
+        }
+
         return user;
     }
 
+
     public User getUser(int userId) {
-        User u = new User();
-        u.setUserId(userId);
-        u.setHeight(190);
-        u.setWeight(200);
-        u.setName("Fatih");
-        u.setBirthDate(Date.from(Instant.now()));
-        u.setEmail("fkucuk@gmail.com");
-        u.setSurname("Küçük");
-        return u;
+        String sql = "SELECT * FROM User WHERE userId = :userId";
+
+        try(Connection con = DbHelper.getSql2o().open()) {
+            return con.createQuery(sql).addParameter("userId", userId).executeAndFetchFirst(User.class);
+        }
     }
 
     public User updateUser(User user) {
+
+        String sql = "UPDATE User SET name = :name, password = :password, isActive = :isActive, weight = :weight, height = :height " +
+                "WHERE userId = :userId";
+//        try
+//        {Class.forName("com.mysql.jdbc.Driver");} catch(ClassNotFoundException e){
+//        }
+
+
+        try(Connection con = DbHelper.getSql2o().open()) {
+            con.createQuery(sql)
+                    .addParameter("name", user.getName())
+                    .addParameter("password", user.getPassword())
+                    .addParameter("isActive", user.isActive())
+                    .addParameter("weight", user.getWeight())
+                    .addParameter("height", user.getHeight())
+                    .addParameter("userId", user.getUserId())
+                    .executeUpdate();
+        }
         return user;
+    }
+
+    public int createUserMeal(int userId, int mealTypeId, int day) {
+        String sql = "INSERT INTO UserMeal (UserId, MealTypeId, Day)" +
+                "VALUES (:userId, :mealTypeId, :day)";
+        int result;
+        try(Connection con = DbHelper.getSql2o().open()){
+            result = con.createQuery(sql)
+                    .addParameter(":userId", userId)
+                    .addParameter(":mealTypeId", mealTypeId)
+                    .addParameter(":day", day)
+                    .executeUpdate()
+                    .getKey(Integer.class);
+        }
+        return result;
+
     }
 
     public Meal addUserMeal(int userId, Meal meal) {
@@ -57,8 +101,15 @@ public class UserRepository {
     }
 
     public int getUserIdByEmail(String email){
-        //TODO:
-        return 123;
+
+        String sql = "SELECT userId FROM USER " +
+                "WHERE email = :email";
+        try (Connection con = DbHelper.getSql2o().open()){
+
+            return con.createQuery(sql)
+                    .addParameter("email",email)
+                    .executeScalar(Integer.class);
+        }
     }
 
     public boolean authenticate(String username, String password) {

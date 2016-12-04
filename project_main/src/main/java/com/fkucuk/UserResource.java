@@ -8,19 +8,23 @@ import com.fkucuk.model.User;
 import com.fkucuk.repository.UserRepository;
 
 import javax.ws.rs.*;
+import java.util.Date;
 import java.util.List;
 
 
 /**
  * Created by fat on 28.11.2016.
  */
-@Path("users") //http:localhost:8080/exercise-services/webapi/users
+@Path("users") //http:localhost:8080/webapi/users
 public class UserResource {
 
     private UserRepository userRepository = new UserRepository();
 
     @POST
     public User createUser(User user){
+        user.setActive(true);
+        Date d = new Date();
+        user.setRegistrationDate(d);
         return userRepository.createUser(user);
     }
 
