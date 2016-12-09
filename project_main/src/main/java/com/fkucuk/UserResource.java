@@ -22,20 +22,17 @@ public class UserResource {
 
     @POST
     public User createUser(User user){
-        user.setActive(true);
-        Date d = new Date();
-        user.setRegistrationDate(d);
         return userRepository.createUser(user);
     }
 
     @GET
-    @Path("{userId}") //http:localhost:8080/exercise-services/webapi/users/123
+    @Path("{userId}") //http:localhost:8080/webapi/users/123
     public User getUser(@PathParam("userId") int userId){
         return userRepository.getUser(userId);
     }
 
     @PUT
-    public User getUser(User user){
+    public User updateUser(User user){
         return userRepository.updateUser(user);
     }
 

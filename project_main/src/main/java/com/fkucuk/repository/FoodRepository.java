@@ -23,7 +23,7 @@ public class FoodRepository  {
 
         System.out.println("geldi");
 
-
+        System.out.println(System.getProperty("RDS_HOSTNAME").toString());
         Client client = ClientBuilder.newClient();
 
         return client.target("http://api.nal.usda.gov/ndb")

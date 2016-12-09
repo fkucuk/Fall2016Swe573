@@ -7,35 +7,38 @@ import java.util.List;
  * Created by fat on 28.11.2016.
  */
 public class Meal {
+    private int mealId;
     private MealType mealType;
-    private String name;
     private int mealDay;
-    private List<Food> food;
+    private List<FoodConsumption> foodConsumptions;
     private List<Recipe> recipes;
+
+
+    public Meal(MealType mealType, int mealDay){
+        this.mealType = mealType;
+        this.mealDay = mealDay;
+    }
+
+    public int getMealId() {
+        return mealId;
+    }
+
+    public void setMealId(int mealId) {
+        this.mealId = mealId;
+    }
+
+    public List<FoodConsumption> getFoodConsumptions() {
+        return foodConsumptions;
+    }
+
+    public void setFoodConsumptions(List<FoodConsumption> foodConsumptions) {
+        this.foodConsumptions = foodConsumptions;
+    }
 
     public int getMealDay() {
         return mealDay;
     }
 
-    public void setMealDay(int mealDay) {
-        this.mealDay = mealDay;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public List<Food> getFood() {
-        return food;
-    }
-
-    public void setFood(List<Food> food) {
-        this.food = food;
-    }
 
     public List<Recipe> getRecipes() {
         return recipes;
@@ -49,7 +52,5 @@ public class Meal {
         return mealType;
     }
 
-    public void setMealType(MealType mealType) {
-        this.mealType = mealType;
-    }
+
 }

@@ -1,6 +1,7 @@
 package com.fkucuk;
 
 import com.fkucuk.model.FoodSearchResult;
+import com.fkucuk.repository.DbHelper;
 import com.fkucuk.repository.FoodRepository;
 
 import javax.ws.rs.GET;

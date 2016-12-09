@@ -13,7 +13,8 @@ public class HelperResource {
     @GET
     @Path("bmi")
     public float calculateBmi(@QueryParam(value = "height")float height,@QueryParam(value = "weight") float weight){
-        return 0;
+        double heightInMeter = height / 100;
+        return (float)(weight / Math.pow(heightInMeter, 2));
     }
 
 

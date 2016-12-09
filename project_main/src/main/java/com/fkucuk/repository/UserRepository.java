@@ -1,9 +1,8 @@
 package com.fkucuk.repository;
 
-import com.fkucuk.model.Activity;
-import com.fkucuk.model.Meal;
-import com.fkucuk.model.User;
+import com.fkucuk.model.*;
 import org.sql2o.Connection;
+import org.sql2o.Query;
 
 import java.util.List;
 
@@ -13,8 +12,8 @@ import java.util.List;
 public class UserRepository {
 
     public User createUser(User user) {
-        String sql = "INSERT INTO USER (email, name, password, isActive, weight, height)" +
-                "VALUES (:email,:name,:password, :isActive,:weight,:height)";
+        String sql = "INSERT INTO User (Email, Name, Password, IsActive, Weight, Height)" +
+                "VALUES (:email, :name, :password, :isActive, :weight, :height)";
 
         try (Connection con = DbHelper.getSql2o().open()){
 
@@ -35,7 +34,7 @@ public class UserRepository {
 
 
     public User getUser(int userId) {
-        String sql = "SELECT * FROM User WHERE userId = :userId";
+        String sql = "SELECT * FROM User WHERE UserId = :userId";
 
         try(Connection con = DbHelper.getSql2o().open()) {
             return con.createQuery(sql).addParameter("userId", userId).executeAndFetchFirst(User.class);
@@ -44,12 +43,9 @@ public class UserRepository {
 
     public User updateUser(User user) {
 
-        String sql = "UPDATE User SET name = :name, password = :password, isActive = :isActive, weight = :weight, height = :height " +
-                "WHERE userId = :userId";
-//        try
-//        {Class.forName("com.mysql.jdbc.Driver");} catch(ClassNotFoundException e){
-//        }
-
+        String sql = "UPDATE User SET Name = :name, Password = :password, IsActive = :isActive "+
+                ", Weight = :weight, Height = :height " +
+                "WHERE UserId = :userId";
 
         try(Connection con = DbHelper.getSql2o().open()) {
             con.createQuery(sql)
@@ -65,14 +61,14 @@ public class UserRepository {
     }
 
     public int createUserMeal(int userId, int mealTypeId, int day) {
-        String sql = "INSERT INTO UserMeal (UserId, MealTypeId, Day)" +
-                "VALUES (:userId, :mealTypeId, :day)";
+        String sql = "INSERT INTO UserMeal (UserId, MealTypeId, MealDay) " +
+                "VALUES (:userId, :mealTypeId, :mealDay)";
         int result;
         try(Connection con = DbHelper.getSql2o().open()){
             result = con.createQuery(sql)
                     .addParameter(":userId", userId)
                     .addParameter(":mealTypeId", mealTypeId)
-                    .addParameter(":day", day)
+                    .addParameter(":mealDay", day)
                     .executeUpdate()
                     .getKey(Integer.class);
         }
@@ -81,8 +77,60 @@ public class UserRepository {
     }
 
     public Meal addUserMeal(int userId, Meal meal) {
+
+        final String sqlExists = "SELECT UserMealId FROM UserMeal "+
+                "WHERE MealTypeId = :mealTypeId " +
+                " AND MealDay = :mealDay AND UserId = :userId";
+
+        final String sqlInsert = "INSERT INTO UserMeal (UserId, MealTypeId, MealDay) " +
+                "VALUES (:userId, :mealTypeId, :mealDay)";
+
+        final String sqlFoods = "INSERT INTO MealFood (UserMealId, FoodId, Unit, Quantity) " +
+                "VALUES (:userMealId, :foodId, :unit, :quantity)";
+
+         try(Connection conn = DbHelper.getSql2o().beginTransaction()){
+
+             Integer userMealId =  conn.createQuery(sqlExists)
+                     .addParameter("userId", userId)
+                     .addParameter("mealTypeId", meal.getMealType())
+                     .addParameter("mealDay", meal.getMealDay())
+                     .executeScalar(Integer.class);
+
+             if (userMealId == null){
+                 userMealId = conn.createQuery(sqlInsert)
+                         .addParameter("userId", userId)
+                         .addParameter("mealTypeId", (int)meal.getMealType().getValue())
+                         .addParameter("mealDay", meal.getMealDay())
+                         .executeUpdate()
+                         .getKey(Integer.class);
+             }
+
+             Query foodQuery = conn.createQuery(sqlFoods);
+
+             for (FoodConsumption f : meal.getFoodConsumptions()
+                  ) {
+                 foodQuery.addParameter("userMealId", userMealId)
+                         .addParameter("foodId", f.getFood().getId())
+                         .addParameter("unit", f.getUnit().getName())
+                         .addParameter("quantity", f.getQuantity())
+                         .addToBatch();
+             }
+
+             foodQuery.executeBatch();
+             conn.commit();
+         }
+
+         return getUserMeal(userId, meal.getMealDay(), meal.getMealType());
+    }
+
+    public Meal getUserMeal(int userId, int day, MealType mealType){
+//        final String sql = "SELECT * FROM UserMeal um " +
+//                "JOIN MealFood mf ON um.mealId = mf.mealId" +
+//                "WHERE um.UserId = :userId"
         return null;
     }
+
+
 
 
     public Activity addUserActivity(int userId, Activity activity) {
@@ -102,7 +150,7 @@ public class UserRepository {
 
     public int getUserIdByEmail(String email){
 
-        String sql = "SELECT userId FROM USER " +
+        String sql = "SELECT userId FROM User " +
                 "WHERE email = :email";
         try (Connection con = DbHelper.getSql2o().open()){
 
