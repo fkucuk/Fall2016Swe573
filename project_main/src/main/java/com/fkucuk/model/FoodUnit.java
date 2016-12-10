@@ -5,7 +5,7 @@ package com.fkucuk.model;
  */
 public class FoodUnit {
     private int foodUnitId;
-    private int name;
+    private String name;
 
     public int getFoodUnitId() {
         return foodUnitId;
@@ -15,11 +15,11 @@ public class FoodUnit {
         this.foodUnitId = foodUnitId;
     }
 
-    public int getName() {
+    public String getName() {
         return name;
     }
 
-    public void setName(int name) {
+    public void setName(String name) {
         this.name = name;
     }
 }

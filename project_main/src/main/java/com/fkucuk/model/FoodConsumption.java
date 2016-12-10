@@ -9,6 +9,12 @@ public class FoodConsumption {
     private float quantity;
     private FoodUnit unit;
 
+    public FoodConsumption(Food food, float quantity, FoodUnit unit){
+        this.food = food;
+        this.quantity = quantity;
+        this.unit = unit;
+    }
+
     public Food getFood() {
         return food;
     }

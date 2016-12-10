@@ -1,6 +1,5 @@
 package com.fkucuk.model;
 
-import java.util.Date;
 import java.util.List;
 
 /**
@@ -11,13 +10,13 @@ public class Meal {
     private MealType mealType;
     private int mealDay;
     private List<FoodConsumption> foodConsumptions;
-    private List<Recipe> recipes;
 
 
     public Meal(MealType mealType, int mealDay){
         this.mealType = mealType;
         this.mealDay = mealDay;
     }
+
 
     public int getMealId() {
         return mealId;
@@ -40,13 +39,6 @@ public class Meal {
     }
 
 
-    public List<Recipe> getRecipes() {
-        return recipes;
-    }
-
-    public void setRecipes(List<Recipe> recipes) {
-        this.recipes = recipes;
-    }
 
     public MealType getMealType() {
         return mealType;

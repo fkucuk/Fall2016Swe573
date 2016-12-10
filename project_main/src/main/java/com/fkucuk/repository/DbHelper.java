@@ -67,7 +67,7 @@ public class DbHelper {
         if (System.getProperty("RDS_PASSWORD") != null){
             password = System.getProperty("RDS_PASSWORD");
         }else{
-            password = "Msjavx86exe!";
+            password = "*********";
         }
         return password;
     }

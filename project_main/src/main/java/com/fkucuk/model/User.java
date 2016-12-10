@@ -16,6 +16,8 @@ public class User {
 	private float height;
 	private Date birthDate;
 
+
+
 	public Date getRegistrationDate() {
 		return registrationDate;
 	}

@@ -1,14 +1,14 @@
 package com.fkucuk.repository;
 
-import com.fkucuk.model.Meal;
-import com.fkucuk.model.MealType;
-import com.fkucuk.model.User;
+import com.fkucuk.model.*;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class UserRepositoryTest {
 
@@ -45,11 +45,35 @@ public class UserRepositoryTest {
     @Test
     public void WHEN_AddMealToUser_SR_ValidMeal(){
         Meal m = new Meal(MealType.BREAKFAST, 20161209);
+        List<FoodConsumption> foodConsumptions = new ArrayList<>();
+
+        Food f = new Food();
+        f.setId(-123);
+        f.setName("TESTFood");
 
 
-        m = userRepository.addUserMeal(1, m);
+        FoodUnit fu = new FoodUnit();
+        fu.setName("gr");
 
-        Assert.assertTrue(m.getMealId() > 0);
+
+
+        FoodConsumption fc = new FoodConsumption(f, 150, fu);
+
+        foodConsumptions.add(fc);
+        m.setFoodConsumptions(foodConsumptions);
+        List<Meal> meals = new ArrayList<>();
+        meals.add(m);
+
+
+
+        int result = userRepository.addUserMeal(1, m);
+
+        Assert.assertTrue(result > 0);
     }
 
+    @Test
+    public void WHEN_GetUserMeal_SR_NotNull(){
+        UserMeal userMeal = userRepository.getUserMeal(1, 20161209);
+        Assert.assertTrue(userMeal != null);
+    }
 }

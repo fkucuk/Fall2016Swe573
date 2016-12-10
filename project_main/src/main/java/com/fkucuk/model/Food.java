@@ -7,6 +7,15 @@ public class Food {
 
     private int id;
     private String name;
+    private String jsonData;
+
+    public String getJsonData() {
+        return jsonData;
+    }
+
+    public void setJsonData(String jsonData) {
+        this.jsonData = jsonData;
+    }
 
     public int getId() {
         return id;
