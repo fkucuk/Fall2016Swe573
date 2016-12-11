@@ -3,38 +3,35 @@ package com.fkucuk.model;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement
+
 public class Activity {
 
-	private String id;
+	private int id;
 	private String description;
-	private int duration;
-	private User user;
+	private float calorieBurnPerHour;
 
-	public User getUser() {
-		return user;
+	public Activity(){}
+
+	public float getCalorieBurnPerHour() {
+		return calorieBurnPerHour;
 	}
-	public void setUser(User user) {
-		this.user = user;
+
+	public void setCalorieBurnPerHour(float calorieBurnPerHour) {
+		this.calorieBurnPerHour = calorieBurnPerHour;
 	}
-	public String getId() {
+
+	public int getId() {
 		return id;
 	}
-	public void setId(String id) {
+	public void setId(int id) {
 		this.id = id;
 	}
-	@XmlElement(name="desc")
+
 	public String getDescription() {
 		return description;
 	}
 	public void setDescription(String description) {
 		this.description = description;
-	}
-	public int getDuration() {
-		return duration;
-	}
-	public void setDuration(int duration) {
-		this.duration = duration;
 	}
 
 }

@@ -18,6 +18,6 @@
             username="fatapp"
             password="Msjavx86exe!"
             driverClassName="com.mysql.jdbc.Driver"
-            url="jdbc:mysql://localhost:3306/fatapp?allowMultiQueries=true"
+            url="jdbc:mysql://localhost:3306/fatapp?allowMultiQueries=true&amp;useSSL=false"
     />
 </Context>

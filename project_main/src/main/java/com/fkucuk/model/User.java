@@ -15,8 +15,17 @@ public class User {
 	private float weight;
 	private float height;
 	private Date birthDate;
+	private String activityCat;
 
-
+	public String getActivityCat() {
+		if (this.weight < 60)
+			return "Cat1";
+		if (this.weight < 70)
+			return "Cat2";
+		if(this.weight < 80)
+			return "Cat3";
+		return "Cat4";
+	}
 
 	public Date getRegistrationDate() {
 		return registrationDate;

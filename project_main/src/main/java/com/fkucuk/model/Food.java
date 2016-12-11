@@ -1,13 +1,12 @@
 package com.fkucuk.model;
 
-/**
- * Created by FATIH.KUCUK on 30.11.2016.
- */
 public class Food {
 
     private int id;
     private String name;
     private String jsonData;
+
+    public Food(){}
 
     public String getJsonData() {
         return jsonData;

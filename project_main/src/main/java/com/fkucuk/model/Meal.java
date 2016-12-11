@@ -2,16 +2,13 @@ package com.fkucuk.model;
 
 import java.util.List;
 
-/**
- * Created by fat on 28.11.2016.
- */
 public class Meal {
     private int mealId;
     private MealType mealType;
     private int mealDay;
     private List<FoodConsumption> foodConsumptions;
 
-
+    public Meal(){}
     public Meal(MealType mealType, int mealDay){
         this.mealType = mealType;
         this.mealDay = mealDay;
@@ -37,8 +34,6 @@ public class Meal {
     public int getMealDay() {
         return mealDay;
     }
-
-
 
     public MealType getMealType() {
         return mealType;

@@ -19,7 +19,7 @@ public class ActivityClientTest {
 		
 		ActivitySearchClient client = new ActivitySearchClient();
 		
-		List<String> searchValues = new ArrayList<String>();
+		List<String> searchValues = new ArrayList<>();
 		searchValues.add("biking");
 		searchValues.add("running");
 		
@@ -43,7 +43,7 @@ public class ActivityClientTest {
 		ActivitySearchClient client = new ActivitySearchClient();
 		
 		String param= "description";
-		List<String> searchValues = new ArrayList<String>();
+		List<String> searchValues = new ArrayList<>();
 		searchValues.add("swimming");
 		searchValues.add("running");
 		
@@ -71,9 +71,9 @@ public class ActivityClientTest {
 	public void testPut() {
 		Activity activity = new Activity();
 		
-		activity.setId("3456");
+		activity.setId(3456);
 		activity.setDescription("Bikram Yoga");
-		activity.setDuration(90);
+//		activity.setDuration(90);
 		
 		ActivityClient client = new ActivityClient();
 		
@@ -88,7 +88,7 @@ public class ActivityClientTest {
 		
 		Activity activity = new Activity();
 		activity.setDescription("Swimming");
-		activity.setDuration(90);
+//		activity.setDuration(90);
 		
 		activity = client.create(activity);
 		

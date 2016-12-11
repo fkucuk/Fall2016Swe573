@@ -10,11 +10,15 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class UserRepositoryTest {
+public class RepositoriesTest {
 
     UserRepository userRepository;
-    public UserRepositoryTest(){
+    ActivityRepository activityRepository;
+    FoodRepository foodRepository;
+    public RepositoriesTest(){
         userRepository = new UserRepository();
+        foodRepository = new FoodRepository();
+        activityRepository = new ActivityRepository();
     }
     @Test
     public void WHEN_AddValidUser_SHOULDRETURN_PositiveID(){
@@ -66,14 +70,32 @@ public class UserRepositoryTest {
 
 
 
-        int result = userRepository.addUserMeal(1, m);
+        int result = foodRepository.addUserMeal(1, m);
 
         Assert.assertTrue(result > 0);
     }
 
     @Test
     public void WHEN_GetUserMeal_SR_NotNull(){
-        UserMeal userMeal = userRepository.getUserMeal(1, 20161209);
+        UserMeal userMeal = foodRepository.getUserMeal(1, 20161209);
+        System.out.println(userMeal.toString());
         Assert.assertTrue(userMeal != null);
+    }
+
+    @Test
+    public void WHEN_AddUserActivity_SR_ActivityID(){
+        UserActivity ua = new UserActivity();
+        Activity a = new Activity();
+        a.setDescription("Cycling, mountain bike, bmx");
+        a.setId(1);
+        a.setCalorieBurnPerHour(695);
+
+        ua.setActivity(a);
+        ua.setDuration(120);
+        ua.setMoment(new Date());
+        ua.setUserId(1);
+
+        int addedActivityId = activityRepository.addUserActivity(ua);
+        Assert.assertTrue(addedActivityId > 0);
     }
 }

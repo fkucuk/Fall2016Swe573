@@ -9,9 +9,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-/**
- * Created by fat on 04.12.2016.
- */
+
 public class DbHelper {
 
 
@@ -47,7 +45,7 @@ public class DbHelper {
             connUrl = "jdbc:mysql://" + hostname + ":" +
                     port + "/" + dbName;
         }else{
-            connUrl = "jdbc:mysql://localhost:3306/fatapp";
+            connUrl = "jdbc:mysql://localhost:3306/fatapp?useSSL=false";
         }
         return connUrl;
     }
@@ -67,7 +65,7 @@ public class DbHelper {
         if (System.getProperty("RDS_PASSWORD") != null){
             password = System.getProperty("RDS_PASSWORD");
         }else{
-            password = "*********";
+            password = "******";
         }
         return password;
     }
@@ -95,10 +93,10 @@ public class DbHelper {
                 String password = System.getProperty("RDS_PASSWORD");
                 String hostname = System.getProperty("RDS_HOSTNAME");
                 String port = System.getProperty("RDS_PORT");
-                String jdbcUrl = "jdbc:mysql://" + hostname + ":" + port + "/" + dbName + "?user=" + userName + "&password=" + password;
+                return  "jdbc:mysql://" + hostname + ":" + port + "/" + dbName + "?user=" + userName + "&password=" + password;
                 //logger.trace("Getting remote connection with connection string from environment variables.");
                 //logger.info("Remote connection successful.");
-                return jdbcUrl;
+
             }
             catch (ClassNotFoundException e) {
                 //    logger.warn(e.toString());
@@ -118,9 +116,8 @@ public class DbHelper {
                 String port = System.getProperty("RDS_PORT");
                 String jdbcUrl = "jdbc:mysql://" + hostname + ":" + port + "/" + dbName + "?user=" + userName + "&password=" + password;
                 //logger.trace("Getting remote connection with connection string from environment variables.");
-                Connection con = DriverManager.getConnection(jdbcUrl);
+                return DriverManager.getConnection(jdbcUrl);
                 //logger.info("Remote connection successful.");
-                return con;
             }
             catch (ClassNotFoundException e) {
                 //logger.warn(e.toString());

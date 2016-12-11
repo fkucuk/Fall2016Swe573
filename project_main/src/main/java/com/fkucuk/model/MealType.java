@@ -1,8 +1,10 @@
 package com.fkucuk.model;
 
-/**
- * Created by FATIH.KUCUK on 30.11.2016.
- */
+import org.omg.CORBA.NO_IMPLEMENT;
+
+import java.util.HashMap;
+import java.util.Map;
+
 public enum MealType {
     BREAKFAST(1), LUNCH(2), DINNER(3), SNACK(4);
 
@@ -14,5 +16,19 @@ public enum MealType {
 
     public int getValue(){
         return this.value;
+    }
+
+    private static final Map<Integer, MealType> intToTypeMap = new HashMap<>();
+    static {
+        for (MealType type : MealType.values()) {
+            intToTypeMap.put(type.value, type);
+        }
+    }
+
+    public static MealType fromInt(int i) {
+        MealType type = intToTypeMap.get(i);
+        if (type == null)
+            throw new NO_IMPLEMENT();
+        return type;
     }
 }
