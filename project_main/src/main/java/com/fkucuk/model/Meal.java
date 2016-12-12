@@ -5,6 +5,15 @@ import java.util.List;
 public class Meal {
     private int mealId;
     private MealType mealType;
+
+    public void setMealType(MealType mealType) {
+        this.mealType = mealType;
+    }
+
+    public void setMealDay(int mealDay) {
+        this.mealDay = mealDay;
+    }
+
     private int mealDay;
     private List<FoodConsumption> foodConsumptions;
 

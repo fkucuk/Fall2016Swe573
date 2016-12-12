@@ -1,22 +1,17 @@
 package com.fkucuk;
 
 
-import com.fkucuk.domain.interfaces.repository.IUserRepository;
 import com.fkucuk.model.*;
+import com.fkucuk.model.request.FoodLog;
 import com.fkucuk.repository.*;
 
 import javax.ws.rs.*;
-import javax.ws.rs.core.GenericEntity;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Date;
+
 import java.util.List;
 
-
-/**
- * Created by fat on 28.11.2016.
- */
 @Path("users") //http:localhost:8080/webapi/users
 public class UserResource {
 
@@ -41,23 +36,26 @@ public class UserResource {
     }
 
     @POST
-    @Path("{userId}/Meal")
-    public void addUserMeal(@PathParam("userId") int userId, Meal meal){
-        foodRepository.addUserMeal(userId, meal);
+    @Path("{userId}/meals")
+    public void addUserMeal(@PathParam("userId") int userId, FoodLog foodLog){
+        foodRepository.logUserFood(userId, foodLog);
     }
 
     @POST
-    @Path("{userId}/Activity")
+    @Path("{userId}/activity")
     public Response addUserActivity(@PathParam("userId") int userId, UserActivity userActivity){
         activityRepository.addUserActivity(userActivity);
         return Response.ok().build();
     }
 
     @GET
-    @Path("{userId}/Meals")
+    @Path("{userId}/meals")
     public Response getUserMeals(@PathParam("userId") int userId,
                                  @QueryParam(value = "startDay") int startDay,
-                                 @QueryParam(value = "endDay") int endDay){
+                                 @QueryParam(value = "endDay") @DefaultValue("-1") int endDay){
+        if (endDay == -1)
+            endDay = startDay;
+
         UserMeal userMeal = foodRepository.getUserMeal(userId, startDay, endDay);
         if (userMeal == null)
             return Response.status(Response.Status.NOT_FOUND).build();
@@ -66,7 +64,7 @@ public class UserResource {
     }
 
     @GET
-    @Path("Test")
+    @Path("test")
     public Contact getContact(){
         List<City> cities = new ArrayList<>();
         cities.add(new City("Istanbul"));

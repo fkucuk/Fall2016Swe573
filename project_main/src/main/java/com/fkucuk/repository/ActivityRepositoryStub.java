@@ -3,14 +3,13 @@ package com.fkucuk.repository;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.fkucuk.domain.interfaces.repository.ActivityRepository;
 import com.fkucuk.model.Activity;
 import com.fkucuk.model.ActivitySearch;
 import com.fkucuk.model.User;
 
-public class ActivityRepositoryStub implements ActivityRepository {
+public class ActivityRepositoryStub  {
 
-	@Override
+
 	public List<Activity> findByConstraints(ActivitySearch search) {
 		
 		System.out.println(search.getDurationTo());
@@ -19,7 +18,7 @@ public class ActivityRepositoryStub implements ActivityRepository {
 		List<Activity> activities = new ArrayList<>();
 		
 		Activity activity = new Activity();
-		activity.setId(2345);
+		activity.setActivityId(2345);
 		activity.setDescription("swimming");
 //		activity.setDuration(55);
 		
@@ -28,14 +27,14 @@ public class ActivityRepositoryStub implements ActivityRepository {
 		return activities;
 	}
 	
-	@Override
+
 	public List<Activity> findByDescription(List<String> descriptions, int durationFrom, int durationTo) {
 		// select * from activities where description in (?,?,?) and duration > ? and duration < ?
 		
 		List<Activity> activities = new ArrayList<>();
 		
 		Activity activity = new Activity();
-		activity.setId(2345);
+		activity.setActivityId(2345);
 		activity.setDescription("swimming");
 //		activity.setDuration(55);
 		
@@ -44,17 +43,17 @@ public class ActivityRepositoryStub implements ActivityRepository {
 		return activities;
 	}
 	
-	@Override
+
 	public void create(Activity activity) {
 		//should issue a insert statement to the db
 	}
 	
-	@Override
+
 	public void delete(String activityId) {
 		//delete from activity where activityid = ?
 	}
 	
-	@Override
+
 	public Activity update(Activity activity) {
 		//search the database to see if we have an activity with that id already
 		//select * from Activity where id = ?
@@ -86,7 +85,7 @@ public class ActivityRepositoryStub implements ActivityRepository {
 		return activities;
 	}
 	
-	@Override
+
 	public Activity findActivity(String activityId) {
 		
 		if(activityId.equals("7777")) {
@@ -95,7 +94,7 @@ public class ActivityRepositoryStub implements ActivityRepository {
 		
 		Activity activity1 = new Activity();
 		
-		activity1.setId(1234);
+		activity1.setActivityId(1234);
 		activity1.setDescription("Swimming");
 //		activity1.setDuration(55);
 		

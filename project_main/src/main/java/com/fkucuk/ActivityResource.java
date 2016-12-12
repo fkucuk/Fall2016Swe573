@@ -2,56 +2,54 @@ package com.fkucuk;
 
 import java.util.List;
 
-import javax.ws.rs.Consumes;
-import javax.ws.rs.DELETE;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.PUT;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
 import com.fkucuk.model.Activity;
-import com.fkucuk.model.User;
-import com.fkucuk.domain.interfaces.repository.ActivityRepository;
-import com.fkucuk.repository.ActivityRepositoryStub;
+import com.fkucuk.model.ActivitySearchResult;
+import com.fkucuk.repository.ActivityRepository;
 
-@Path("activities") //http:localhost:8080/exercise-services/webapi/activites
+
+@Path("activities") //http:localhost:8080/webapi/activites
 public class ActivityResource {
 
-	private ActivityRepository activityRepository = new ActivityRepositoryStub();
-	
-	@DELETE
-	@Path("{activityId}")
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-	public Response delete (@PathParam ("activityId") String activityId) {
-		System.out.println(activityId);
-		
-		activityRepository.delete(activityId);
-		
-		return Response.ok().build();
+	private ActivityRepository activityRepository = new ActivityRepository();
+
+	@GET
+	public List<ActivitySearchResult> getAllActivities( @QueryParam(value = "keyword") String keyword) {
+		return activityRepository.searchActivities(keyword);
 	}
 	
-	@PUT
-	@Path("{activityId}")
-	@Consumes(MediaType.APPLICATION_JSON)
-	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-	public Response update(Activity activity) {
-		
-		System.out.println(activity.getId());
-		
-		activity = activityRepository.update(activity);
-		
-		return Response.ok().entity(activity).build();
-		
-	}
+//	@DELETE
+//	@Path("{activityId}")
+//	@Consumes(MediaType.APPLICATION_JSON)
+//	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+//	public Response delete (@PathParam ("activityId") String activityId) {
+//		System.out.println(activityId);
+//
+//		activityRepository.delete(activityId);
+//
+//		return Response.ok().build();
+//	}
 	
-	
+//	@PUT
+//	@Path("{activityId}")
+//	@Consumes(MediaType.APPLICATION_JSON)
+//	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
+//	public Response update(Activity activity) {
+//
+//		System.out.println(activity.getId());
+//
+//		activity = activityRepository.update(activity);
+//
+//		return Response.ok().entity(activity).build();
+//
+//	}
+
+
 //	@POST
 //	@Path("activity")
 //	@Consumes(MediaType.APPLICATION_JSON)
@@ -84,21 +82,16 @@ public class ActivityResource {
 //		return activity;
 //	}
 	
-	@GET
-	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-	public List<Activity> getAllActivities() {
-		return activityRepository.findAllActivities();
-	}
+
 	
 	@GET
-	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
-	@Path("{activityId}") //http:localhost:8080/exercise-services/webapi/activites/1234
-	public Response getActivity(@PathParam ("activityId") String activityId) {
-		if(activityId == null || activityId.length() < 4) {
+	@Path("{activityId}") //http:localhost:8080/webapi/activites/1234
+	public Response getActivity(@PathParam ("activityId") Integer activityId) {
+		if(activityId == null) {
 			return Response.status(Status.BAD_REQUEST).build();
 		}
 		
-		Activity activity = activityRepository.findActivity(activityId);
+		Activity activity = activityRepository.getActivity(activityId);
 		
 		if(activity == null) {
 			return Response.status(Status.NOT_FOUND).build();

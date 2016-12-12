@@ -70,7 +70,7 @@ public class ActivityClient {
 	public Activity update(Activity activity) {
 		WebTarget target = client.target("http://localhost:8080/exercise-services/webapi/");
 		
-		Response response = target.path("activities/" + activity.getId())
+		Response response = target.path("activities/" + activity.getActivityId())
 				.request(MediaType.APPLICATION_JSON)
 				.put(Entity.entity(activity, MediaType.APPLICATION_JSON));
 		

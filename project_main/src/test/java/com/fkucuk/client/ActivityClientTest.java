@@ -71,7 +71,7 @@ public class ActivityClientTest {
 	public void testPut() {
 		Activity activity = new Activity();
 		
-		activity.setId(3456);
+		activity.setActivityId(3456);
 		activity.setDescription("Bikram Yoga");
 //		activity.setDuration(90);
 		

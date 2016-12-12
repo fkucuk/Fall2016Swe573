@@ -1,12 +1,8 @@
 package com.fkucuk.model;
 
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
-
-
 public class Activity {
 
-	private int id;
+	private int activityId;
 	private String description;
 	private float calorieBurnPerHour;
 
@@ -20,11 +16,12 @@ public class Activity {
 		this.calorieBurnPerHour = calorieBurnPerHour;
 	}
 
-	public int getId() {
-		return id;
+	public int getActivityId() {
+		return activityId;
 	}
-	public void setId(int id) {
-		this.id = id;
+
+	public void setActivityId(int activityId) {
+		this.activityId = activityId;
 	}
 
 	public String getDescription() {

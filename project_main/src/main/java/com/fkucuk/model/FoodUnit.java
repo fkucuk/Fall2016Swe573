@@ -3,6 +3,15 @@ package com.fkucuk.model;
 public class FoodUnit {
     private int foodUnitId;
     private String name;
+    private String symbol;
+
+    public String getSymbol() {
+        return symbol;
+    }
+
+    public void setSymbol(String symbol) {
+        this.symbol = symbol;
+    }
 
     public int getFoodUnitId() {
         return foodUnitId;

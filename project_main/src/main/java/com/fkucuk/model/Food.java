@@ -2,34 +2,37 @@ package com.fkucuk.model;
 
 public class Food {
 
-    private int id;
-    private String name;
-    private String jsonData;
+    private String foodId;
+    private String foodName;
+
+    public String getFoodId() {
+        return foodId;
+    }
+
+    public void setFoodId(String foodId) {
+        this.foodId = foodId;
+    }
+
+    public String getFoodName() {
+        return foodName;
+    }
+
+    public void setFoodName(String foodName) {
+        this.foodName = foodName;
+    }
+
+    public String getFoodData() {
+        return foodData;
+    }
+
+    public void setFoodData(String foodData) {
+        this.foodData = foodData;
+    }
+
+    private String foodData;
 
     public Food(){}
 
-    public String getJsonData() {
-        return jsonData;
-    }
 
-    public void setJsonData(String jsonData) {
-        this.jsonData = jsonData;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
 }
