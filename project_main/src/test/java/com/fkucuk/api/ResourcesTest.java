@@ -4,6 +4,11 @@ import com.fkucuk.HelperResource;
 import org.junit.Assert;
 import org.junit.Test;
 
+import javax.json.Json;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
+import java.io.StringReader;
+
 /**
  * Created by fat on 09.12.2016.
  */
@@ -21,7 +26,9 @@ public class ResourcesTest {
 
     @Test
     public void WHEN_CallHelperGetFoodName_SR_ProperFoodName(){
-        String actualFoodName = hr.getFoodNameFromFoodReport("{\n" +
+
+        //region long String
+        String jsonStr = "{\n" +
                 "    \"report\": {\n" +
                 "        \"sr\": \"September, 2016\",\n" +
                 "        \"type\": \"Basic\",\n" +
@@ -111,7 +118,14 @@ public class ResourcesTest {
                 "            \n" +
                 "        ]\n" +
                 "    }\n" +
-                "}");
+                "}";
+        //endregion
+
+        JsonReader jsonReader = Json.createReader(new StringReader(jsonStr));
+        JsonObject object = jsonReader.readObject();
+        jsonReader.close();
+
+        String actualFoodName = hr.getFoodNameFromFoodReport(object);
 
         Assert.assertEquals("AARDVARK HABENERO HOT SAUCE", actualFoodName);
     }

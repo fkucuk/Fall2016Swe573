@@ -69,7 +69,8 @@ public class UserResource {
         List<City> cities = new ArrayList<>();
         cities.add(new City("Istanbul"));
         Address[] addresses = {new Address("Long Street 1", "Short Village", cities)};
-        return new Contact(2, "Bob", Arrays.asList(addresses));
+        Contact c =new Contact(2, "Bob", Arrays.asList(addresses));
+        return c;
 
     }
 

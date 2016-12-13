@@ -2,65 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2d86b3b4-e19a-47e8-bcfc-c7f2a457e592" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/model/ActivitySearchResult.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/model/request/FoodLog.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/repository/HelperRepository.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/com/fkucuk/domain/interfaces/repository/ActivityRepository.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/ActivitySearchResource$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/ActivitySearchResource$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/domain/interfaces/repository/ActivityRepository.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/ActivitySearchResource$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/ActivitySearchResource$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/domain/interfaces/repository/ActivityRepository.class" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/java/com/fkucuk/api/HelperResourceTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/fkucuk/api/ResourcesTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/ActivityResource.class" afterPath="$PROJECT_DIR$/target/classes/com/fkucuk/ActivityResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/ActivitySearchResource.class" afterPath="$PROJECT_DIR$/target/classes/com/fkucuk/ActivitySearchResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/FoodResource.class" afterPath="$PROJECT_DIR$/target/classes/com/fkucuk/FoodResource.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Measure.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Nutrient.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/fkucuk/models/ModelsTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/fkucuk/repository/FoodRepositoryTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/com/fkucuk/repository/HelperRepositoryTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/HelperResource.class" afterPath="$PROJECT_DIR$/target/classes/com/fkucuk/HelperResource.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/UserResource.class" afterPath="$PROJECT_DIR$/target/classes/com/fkucuk/UserResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/client/ActivityClient.class" afterPath="$PROJECT_DIR$/target/classes/com/fkucuk/client/ActivityClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/model/Activity.class" afterPath="$PROJECT_DIR$/target/classes/com/fkucuk/model/Activity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/model/Food.class" afterPath="$PROJECT_DIR$/target/classes/com/fkucuk/model/Food.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/model/Meal.class" afterPath="$PROJECT_DIR$/target/classes/com/fkucuk/model/Meal.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/model/MealType.class" afterPath="$PROJECT_DIR$/target/classes/com/fkucuk/model/MealType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/model/User.class" afterPath="$PROJECT_DIR$/target/classes/com/fkucuk/model/User.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/repository/ActivityRepositoryStub.class" afterPath="$PROJECT_DIR$/target/classes/com/fkucuk/repository/ActivityRepositoryStub.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/repository/DbHelper.class" afterPath="$PROJECT_DIR$/target/classes/com/fkucuk/repository/DbHelper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/repository/FoodRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/fkucuk/repository/FoodRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/fkucuk/repository/UserRepository.class" afterPath="$PROJECT_DIR$/target/classes/com/fkucuk/repository/UserRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/ActivityResource.class" afterPath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/ActivityResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/ActivitySearchResource.class" afterPath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/ActivitySearchResource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/FoodResource.class" afterPath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/FoodResource.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/HelperResource.class" afterPath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/HelperResource.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/UserResource.class" afterPath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/UserResource.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/client/ActivityClient.class" afterPath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/client/ActivityClient.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/model/Activity.class" afterPath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/model/Activity.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/model/Food.class" afterPath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/model/Food.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/model/Meal.class" afterPath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/model/Meal.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/model/MealType.class" afterPath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/model/MealType.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/repository/ActivityRepositoryStub.class" afterPath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/repository/ActivityRepositoryStub.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/repository/DbHelper.class" afterPath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/repository/DbHelper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/repository/FoodRepository.class" afterPath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/repository/FoodRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/repository/UserRepository.class" afterPath="$PROJECT_DIR$/target/fatApp-services/WEB-INF/classes/com/fkucuk/repository/UserRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/test-classes/com/fkucuk/client/ActivityClientTest.class" afterPath="$PROJECT_DIR$/target/test-classes/com/fkucuk/client/ActivityClientTest.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sqlScripts/userTableCreate.sql" afterPath="$PROJECT_DIR$/sqlScripts/userTableCreate.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fkucuk/ActivityResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/ActivityResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fkucuk/ActivitySearchResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/ActivitySearchResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fkucuk/FoodResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/FoodResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fkucuk/HelperResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/HelperResource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fkucuk/UserResource.java" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/UserResource.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fkucuk/client/ActivityClient.java" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/client/ActivityClient.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Activity.java" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Activity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Food.java" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Food.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fkucuk/model/FoodUnit.java" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/model/FoodUnit.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Meal.java" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Meal.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fkucuk/repository/ActivityRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/repository/ActivityRepository.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fkucuk/repository/ActivityRepositoryStub.java" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/repository/ActivityRepositoryStub.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fkucuk/repository/DbHelper.java" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/repository/DbHelper.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/fkucuk/repository/FoodRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/fkucuk/repository/FoodRepository.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/index.html" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/fkucuk/client/ActivityClientTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/fkucuk/client/ActivityClientTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/fkucuk/api/ResourcesTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/fkucuk/api/ResourcesTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/com/fkucuk/repository/RepositoriesTest.java" afterPath="$PROJECT_DIR$/src/test/java/com/fkucuk/repository/RepositoriesTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/fatApp-services/META-INF/context.xml" afterPath="$PROJECT_DIR$/target/fatApp-services/META-INF/context.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,13 +50,124 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/main.js">
+      <file leaf-file-name="UserResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/UserResource.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+            <state relative-caret-position="267">
+              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding>
-                <marker date="1481564090998" expanded="true" signature="11466:11495" ph="..." />
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Activity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/Activity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+              <folding>
+                <element signature="e#380#381#0" expanded="true" />
+                <element signature="e#404#405#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Food.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/Food.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="167">
+              <caret line="81" column="13" lean-forward="false" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1555#1556#0" expanded="true" />
+                <element signature="e#1595#1596#0" expanded="true" />
+                <element signature="e#2778#2779#0" expanded="true" />
+                <element signature="e#2820#2821#0" expanded="true" />
+                <element signature="e#3353#3354#0" expanded="true" />
+                <element signature="e#3393#3394#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ModelsTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/fkucuk/models/ModelsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="105" column="55" lean-forward="false" selection-start-line="105" selection-start-column="55" selection-end-line="105" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Measure.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/Measure.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Nutrient.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/Nutrient.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-221">
+              <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FoodResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/FoodResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="199">
+              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ResourceMethodInvocationHandlerFactory.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.24.1/jersey-server-2.24.1.jar!/org/glassfish/jersey/server/model/internal/ResourceMethodInvocationHandlerFactory.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FoodConsumption.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/FoodConsumption.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FoodRepository.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/FoodRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="106">
+              <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getUserMeal#1;class#FoodRepository#0" expanded="false" />
+                <element signature="method#addUserMeal#0;class#FoodRepository#0" expanded="false" />
+                <element signature="method#logUserFood#0;class#FoodRepository#0" expanded="false" />
+                <element signature="method#createUserMeal#0;class#FoodRepository#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -123,13 +197,19 @@
       <find>classFor</find>
       <find>Class.forName</find>
       <find>pass</find>
-      <find>Response</find>
-      <find>response</find>
       <find>null</find>
       <find>get(0)</find>
       <find>(0)</find>
-      <find>getFoodReportFromUSDA</find>
       <find>https</find>
+      <find>_2Decimals</find>
+      <find>$query</find>
+      <find>sty</find>
+      <find>getFoodData</find>
+      <find>json</find>
+      <find>response</find>
+      <find>Response</find>
+      <find>getFoodReportFromUSDA</find>
+      <find>.getEntity()</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,12 +231,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/com/pluralsight/client/ActivityClientTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/model/UserEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Recipie.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Credentials.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/repository/UserRepositoryStub.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Recipe.java" />
         <option value="$PROJECT_DIR$/src/main/java/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/domain/interfaces/repository/IUserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/model/FoodSearchResult.java" />
@@ -182,7 +256,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/ActivitySearchResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/repository/DbHelper.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/model/ActivitySearchResult.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/ActivityResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Activity.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/client/ActivityClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/repository/ActivityRepositoryStub.java" />
@@ -190,18 +263,25 @@
         <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/model/request/FoodLog.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/model/FoodUnit.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Meal.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/HelperResource.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/fkucuk/api/ResourcesTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/repository/HelperRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/UserResource.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/FoodResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/repository/ActivityRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Food.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/fkucuk/repository/RepositoriesTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/repository/FoodRepository.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/dummyobj.json" />
         <option value="$PROJECT_DIR$/src/main/webapp/index.html" />
+        <option value="$PROJECT_DIR$/src/test/java/com/fkucuk/api/ResourcesTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/main.js" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/ActivityResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/HelperResource.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/fkucuk/repository/HelperRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/fkucuk/repository/RepositoriesTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/fkucuk/repository/FoodRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Nutrient.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Measure.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/fkucuk/models/Test.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/UserResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/FoodResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/repository/FoodRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/fkucuk/model/Food.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/fkucuk/models/ModelsTest.java" />
       </list>
     </option>
   </component>
@@ -275,6 +355,48 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fkucuk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fatApp-services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fkucuk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -315,6 +437,100 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fatApp-services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fkucuk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fatApp-services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fkucuk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="repository" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fatApp-services" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project_main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fkucuk" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -339,6 +555,9 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\dev\workspace\Fall2016Swe573\project_main\src\main\webapp\css" />
+    </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.fkucuk" />
     </key>
@@ -346,24 +565,50 @@
       <recent name="com.fkucuk.model" />
     </key>
     <key name="CreateClassDialog.RecentsKey">
-      <recent name="com.fkucuk.repository" />
       <recent name="com.fkucuk.model" />
+      <recent name="com.fkucuk.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.fatApp">
-    <configuration default="false" name="RepositoriesTest.WHEN_GetDemoKey_SR_DemoKey" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="AWS ElasticBeanstalk Deployment.Unnamed">
+    <configuration default="false" name="ModelsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.fkucuk.repository.*" />
+          <option name="PATTERN" value="com.fkucuk.models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="fatApp-services" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.fkucuk.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.fkucuk.repository.RepositoriesTest" />
-      <option name="METHOD_NAME" value="WHEN_GetDemoKey_SR_DemoKey" />
+      <option name="PACKAGE_NAME" value="com.fkucuk.models" />
+      <option name="MAIN_CLASS_NAME" value="com.fkucuk.models.ModelsTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ModelsTest.FoodNutrients_Count" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.fkucuk.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="fatApp-services" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.fkucuk.models" />
+      <option name="MAIN_CLASS_NAME" value="com.fkucuk.models.ModelsTest" />
+      <option name="METHOD_NAME" value="FoodNutrients_Count" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -377,19 +622,19 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="RepositoriesTest.WHEN_GetFoodReportFromApi_SR_ReturnRelatedReport" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ModelsTest.FoodNutrients_Count_FOR_01009" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.fkucuk.repository.*" />
+          <option name="PATTERN" value="com.fkucuk.models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="fatApp-services" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.fkucuk.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.fkucuk.repository.RepositoriesTest" />
-      <option name="METHOD_NAME" value="WHEN_GetFoodReportFromApi_SR_ReturnRelatedReport" />
+      <option name="PACKAGE_NAME" value="com.fkucuk.models" />
+      <option name="MAIN_CLASS_NAME" value="com.fkucuk.models.ModelsTest" />
+      <option name="METHOD_NAME" value="FoodNutrients_Count_FOR_01009" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -403,19 +648,19 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="RepositoriesTest.WHEN_GetFoodReportFromApiForNonExistentFood_SR_ReturnNull" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ModelsTest.FoodNutrients_CalculateNutritientValue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.fkucuk.repository.*" />
+          <option name="PATTERN" value="com.fkucuk.models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="fatApp-services" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.fkucuk.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.fkucuk.repository.RepositoriesTest" />
-      <option name="METHOD_NAME" value="WHEN_GetFoodReportFromApiForNonExistentFood_SR_ReturnNull" />
+      <option name="PACKAGE_NAME" value="com.fkucuk.models" />
+      <option name="MAIN_CLASS_NAME" value="com.fkucuk.models.ModelsTest" />
+      <option name="METHOD_NAME" value="FoodNutrients_CalculateNutritientValue" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -429,45 +674,19 @@
       <patterns />
       <method />
     </configuration>
-    <configuration default="false" name="RepositoriesTest.WHEN_SaveFood_ShouldBeSaved" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="ModelsTest.FoodNutrients_CalculateNutritientValueWithDifferentQuantity" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.fkucuk.repository.*" />
+          <option name="PATTERN" value="com.fkucuk.models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="fatApp-services" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.fkucuk.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.fkucuk.repository.RepositoriesTest" />
-      <option name="METHOD_NAME" value="WHEN_SaveFood_ShouldBeSaved" />
-      <option name="TEST_OBJECT" value="method" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="RepositoriesTest.WHEN_GetNonExistentFood_ShouldBeSaved" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.fkucuk.repository.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="fatApp-services" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.fkucuk.repository" />
-      <option name="MAIN_CLASS_NAME" value="com.fkucuk.repository.RepositoriesTest" />
-      <option name="METHOD_NAME" value="WHEN_GetNonExistentFood_ShouldBeSaved" />
+      <option name="PACKAGE_NAME" value="com.fkucuk.models" />
+      <option name="MAIN_CLASS_NAME" value="com.fkucuk.models.ModelsTest" />
+      <option name="METHOD_NAME" value="FoodNutrients_CalculateNutritientValueWithDifferentQuantity" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -980,19 +1199,19 @@
     <list size="7">
       <item index="0" class="java.lang.String" itemvalue="AWS ElasticBeanstalk Deployment.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.fatApp" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.RepositoriesTest.WHEN_GetDemoKey_SR_DemoKey" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.RepositoriesTest.WHEN_GetFoodReportFromApi_SR_ReturnRelatedReport" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.RepositoriesTest.WHEN_GetFoodReportFromApiForNonExistentFood_SR_ReturnNull" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.RepositoriesTest.WHEN_SaveFood_ShouldBeSaved" />
-      <item index="6" class="java.lang.String" itemvalue="JUnit.RepositoriesTest.WHEN_GetNonExistentFood_ShouldBeSaved" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.ModelsTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ModelsTest.FoodNutrients_Count" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ModelsTest.FoodNutrients_Count_FOR_01009" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ModelsTest.FoodNutrients_CalculateNutritientValue" />
+      <item index="6" class="java.lang.String" itemvalue="JUnit.ModelsTest.FoodNutrients_CalculateNutritientValueWithDifferentQuantity" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.RepositoriesTest.WHEN_GetNonExistentFood_ShouldBeSaved" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.RepositoriesTest.WHEN_SaveFood_ShouldBeSaved" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.RepositoriesTest.WHEN_GetFoodReportFromApiForNonExistentFood_SR_ReturnNull" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.RepositoriesTest.WHEN_GetFoodReportFromApi_SR_ReturnRelatedReport" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.RepositoriesTest.WHEN_GetDemoKey_SR_DemoKey" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ModelsTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ModelsTest.FoodNutrients_CalculateNutritientValueWithDifferentQuantity" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ModelsTest.FoodNutrients_CalculateNutritientValue" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ModelsTest.FoodNutrients_Count_FOR_01009" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.ModelsTest.FoodNutrients_Count" />
       </list>
     </recent_temporary>
   </component>
@@ -1019,7 +1238,7 @@
       <workItem from="1481020905670" duration="7000" />
       <workItem from="1481029253026" duration="4325000" />
       <workItem from="1481055831657" duration="35921000" />
-      <workItem from="1481371762961" duration="56232000" />
+      <workItem from="1481371762961" duration="84275000" />
     </task>
     <task id="LOCAL-00001" summary="jpa dependency addex to pom.xml">
       <created>1480494336094</created>
@@ -1056,56 +1275,64 @@
       <option name="project" value="LOCAL" />
       <updated>1481417699767</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="UI added">
+      <created>1481564198693</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1481564198693</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="RepositoriesTest_WHEN_GetNonExistentFood_ShouldBeSaved - 2016.12.12 at 02h 02m 15s.xml">
-      <configuration name="RepositoriesTest.WHEN_GetNonExistentFood_ShouldBeSaved" configurationId="JUnit" />
+    <history-entry file="ModelsTest - 2016.12.13 at 04h 15m 56s.xml">
+      <configuration name="ModelsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RepositoriesTest_WHEN_GetNonExistentFood_ShouldBeSaved - 2016.12.12 at 02h 02m 28s.xml">
-      <configuration name="RepositoriesTest.WHEN_GetNonExistentFood_ShouldBeSaved" configurationId="JUnit" />
+    <history-entry file="ModelsTest - 2016.12.13 at 05h 30m 54s.xml">
+      <configuration name="ModelsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RepositoriesTest_WHEN_GetNonExistentFood_ShouldBeSaved - 2016.12.12 at 02h 03m 22s.xml">
-      <configuration name="RepositoriesTest.WHEN_GetNonExistentFood_ShouldBeSaved" configurationId="JUnit" />
+    <history-entry file="ModelsTest - 2016.12.13 at 05h 33m 02s.xml">
+      <configuration name="ModelsTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RepositoriesTest_WHEN_GetNonExistentFood_ShouldBeSaved - 2016.12.12 at 02h 03m 43s.xml">
-      <configuration name="RepositoriesTest.WHEN_GetNonExistentFood_ShouldBeSaved" configurationId="JUnit" />
+    <history-entry file="ModelsTest_FoodNutrients_CalculateNutritientValue - 2016.12.13 at 04h 20m 01s.xml">
+      <configuration name="ModelsTest.FoodNutrients_CalculateNutritientValue" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RepositoriesTest_WHEN_GetNonExistentFood_ShouldBeSaved - 2016.12.12 at 02h 04m 21s.xml">
-      <configuration name="RepositoriesTest.WHEN_GetNonExistentFood_ShouldBeSaved" configurationId="JUnit" />
+    <history-entry file="ModelsTest_FoodNutrients_CalculateNutritientValue - 2016.12.13 at 04h 23m 06s.xml">
+      <configuration name="ModelsTest.FoodNutrients_CalculateNutritientValue" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RepositoriesTest_WHEN_GetNonExistentFood_ShouldBeSaved - 2016.12.12 at 02h 04m 53s.xml">
-      <configuration name="RepositoriesTest.WHEN_GetNonExistentFood_ShouldBeSaved" configurationId="JUnit" />
+    <history-entry file="ModelsTest_FoodNutrients_CalculateNutritientValue - 2016.12.13 at 04h 29m 57s.xml">
+      <configuration name="ModelsTest.FoodNutrients_CalculateNutritientValue" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RepositoriesTest_WHEN_GetNonExistentFood_ShouldBeSaved - 2016.12.12 at 02h 06m 52s.xml">
-      <configuration name="RepositoriesTest.WHEN_GetNonExistentFood_ShouldBeSaved" configurationId="JUnit" />
+    <history-entry file="ModelsTest_FoodNutrients_CalculateNutritientValueWithDifferentQuantity - 2016.12.13 at 04h 35m 11s.xml">
+      <configuration name="ModelsTest.FoodNutrients_CalculateNutritientValueWithDifferentQuantity" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RepositoriesTest_WHEN_GetNonExistentFood_ShouldBeSaved - 2016.12.12 at 02h 07m 09s.xml">
-      <configuration name="RepositoriesTest.WHEN_GetNonExistentFood_ShouldBeSaved" configurationId="JUnit" />
+    <history-entry file="ModelsTest_FoodNutrients_CalculateNutritientValueWithDifferentQuantity - 2016.12.13 at 04h 36m 15s.xml">
+      <configuration name="ModelsTest.FoodNutrients_CalculateNutritientValueWithDifferentQuantity" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RepositoriesTest_WHEN_SaveFood_ShouldBeSaved - 2016.12.12 at 02h 00m 15s.xml">
-      <configuration name="RepositoriesTest.WHEN_SaveFood_ShouldBeSaved" configurationId="JUnit" />
+    <history-entry file="ModelsTest_FoodNutrients_Count_FOR_01009 - 2016.12.13 at 04h 12m 21s.xml">
+      <configuration name="ModelsTest.FoodNutrients_Count_FOR_01009" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="RepositoriesTest_WHEN_SaveFood_ShouldBeSaved - 2016.12.12 at 02h 00m 57s.xml">
-      <configuration name="RepositoriesTest.WHEN_SaveFood_ShouldBeSaved" configurationId="JUnit" />
+    <history-entry file="ModelsTest_FoodNutrients_Count_FOR_01009 - 2016.12.13 at 04h 16m 12s.xml">
+      <configuration name="ModelsTest.FoodNutrients_Count_FOR_01009" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="148069000" />
+    <option name="totallyTimeSpent" value="176112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.47803807" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1118,10 +1345,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33911672" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33753943" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24743778" sideWeight="0.4256927" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3103953" sideWeight="0.5743073" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22108346" sideWeight="0.5743073" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1130,7 +1357,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4022082" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1147,31 +1373,86 @@
     <MESSAGE value="tests added&#10;db has been parametrized&#10;repository has been implemented" />
     <MESSAGE value="pwd" />
     <MESSAGE value="ActivityRepository completed." />
-    <option name="LAST_COMMIT_MESSAGE" value="ActivityRepository completed." />
+    <MESSAGE value="UI added" />
+    <option name="LAST_COMMIT_MESSAGE" value="UI added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/FoodRepository.java</url>
-          <line>76</line>
+          <line>81</line>
           <properties />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/FoodRepository.java</url>
-          <line>90</line>
+          <line>95</line>
           <properties />
           <option name="timeStamp" value="31" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/FoodRepository.java</url>
-          <line>252</line>
+          <url>file://$PROJECT_DIR$/src/test/java/com/fkucuk/api/ResourcesTest.java</url>
+          <line>30</line>
           <properties />
-          <option name="timeStamp" value="38" />
+          <option name="timeStamp" value="40" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/FoodRepository.java</url>
+          <line>227</line>
+          <properties />
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/FoodRepository.java</url>
+          <line>225</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/FoodRepository.java</url>
+          <line>237</line>
+          <properties />
+          <option name="timeStamp" value="47" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/fkucuk/models/ModelsTest.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="58" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/fkucuk/models/ModelsTest.java</url>
+          <line>57</line>
+          <properties />
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/fkucuk/models/ModelsTest.java</url>
+          <line>80</line>
+          <properties />
+          <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/fkucuk/UserResource.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="67" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/fkucuk/FoodResource.java</url>
+          <line>30</line>
+          <properties />
+          <option name="timeStamp" value="68" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/fkucuk/FoodResource.java</url>
+          <line>28</line>
+          <properties />
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="39" />
+      <option name="time" value="72" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1180,196 +1461,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/sql2o/sql2o/1.5.4/sql2o-1.5.4.jar!/org/sql2o/data/Row.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="161" column="0" lean-forward="false" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/ActivitySearchType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="15" lean-forward="true" selection-start-line="2" selection-start-column="15" selection-end-line="2" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.24.1/jersey-server-2.24.1.jar!/org/glassfish/jersey/server/model/internal/JavaResourceMethodDispatcherProvider.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.24.1/jersey-server-2.24.1.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DIa0.794/Book.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-540">
-          <caret line="9" column="25" lean-forward="true" selection-start-line="9" selection-start-column="25" selection-end-line="9" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/FoodSearchResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="31" lean-forward="true" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/Recipe.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/City.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/UserActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="18" column="30" lean-forward="false" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
-          <folding>
-            <element signature="e#316#317#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#386#387#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-            <element signature="e#462#463#0" expanded="true" />
-            <element signature="e#543#544#0" expanded="true" />
-            <element signature="e#580#581#0" expanded="true" />
-            <element signature="e#611#612#0" expanded="true" />
-            <element signature="e#661#662#0" expanded="true" />
-            <element signature="e#701#702#0" expanded="true" />
-            <element signature="e#1029#1030#0" expanded="true" />
-            <element signature="e#1069#1070#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/META-INF/context.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="20" column="74" lean-forward="false" selection-start-line="20" selection-start-column="74" selection-end-line="20" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/Address.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="4" lean-forward="false" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/MealType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="117">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/Contact.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="18" column="53" lean-forward="false" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/UserMeal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/domain/interfaces/repository/ActivityRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/ActivitySearchResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="54" column="5" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="54" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/ActivitySearchResult.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
-          <folding>
-            <element signature="e#233#234#0" expanded="true" />
-            <element signature="e#266#267#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#359#360#0" expanded="true" />
-            <element signature="e#431#432#0" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/ActivitySearch.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-85">
           <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/ActivityResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="89" column="32" lean-forward="true" selection-start-line="89" selection-start-column="32" selection-end-line="89" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/Activity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="32" lean-forward="false" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
-          <folding>
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
-            <element signature="e#450#451#0" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1393,25 +1489,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="73" column="31" lean-forward="false" selection-start-line="73" selection-start-column="31" selection-end-line="73" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-          <folding>
-            <element signature="e#1488#1489#0" expanded="true" />
-            <element signature="e#1515#1516#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/FoodConsumption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="22" lean-forward="true" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -1459,14 +1536,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.24.1/jersey-server-2.24.1.jar!/org/glassfish/jersey/server/model/internal/ResourceMethodInvocationHandlerFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="146">
-          <caret line="30" column="19" lean-forward="false" selection-start-line="30" selection-start-column="19" selection-end-line="30" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/FoodUnit.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -1491,18 +1560,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/fkucuk/api/ResourcesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="118" column="0" lean-forward="false" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
-          <folding>
-            <element signature="e#227#228#0" expanded="false" />
-            <element signature="e#268#269#0" expanded="false" />
-            <element signature="method#WHEN_CallHelperGetFoodName_SR_ProperFoodName#0;class#ResourcesTest#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
@@ -1511,138 +1568,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/HelperRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/UserResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/UserRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/DbHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="32">
           <caret line="67" column="36" lean-forward="false" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/ActivityRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/Food.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="97">
-          <caret line="7" column="31" lean-forward="false" selection-start-line="7" selection-start-column="31" selection-end-line="7" selection-end-column="31" />
-          <folding>
-            <element signature="e#164#165#0" expanded="true" />
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#244#245#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-            <element signature="e#310#311#0" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#433#434#0" expanded="true" />
-            <element signature="e#464#465#0" expanded="true" />
-            <element signature="e#512#513#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/FoodResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/HelperResource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="202" column="0" lean-forward="false" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/FoodRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="263" column="0" lean-forward="false" selection-start-line="263" selection-start-column="0" selection-end-line="263" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#logUserFood#0;class#FoodRepository#0" expanded="false" />
-            <element signature="method#createUserMeal#0;class#FoodRepository#0" expanded="false" />
-            <element signature="method#getFoodReportFromUSDA#0;class#FoodRepository#0" expanded="false" />
-            <element signature="method#saveFood#0;class#FoodRepository#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-515">
-          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/fkucuk/repository/RepositoriesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="171" column="0" lean-forward="false" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1670,36 +1599,373 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/style.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/dummyobj.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="-969">
+          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/dummyobj.json">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
+        <state relative-caret-position="-170">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-952">
-          <caret line="31" column="45" lean-forward="true" selection-start-line="31" selection-start-column="45" selection-end-line="31" selection-end-column="45" />
+        <state relative-caret-position="149">
+          <caret line="20" column="37" lean-forward="false" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/UserRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="142">
+          <caret line="11" column="48" lean-forward="false" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/model/FrameworkMethod.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="33" column="0" lean-forward="false" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fkucuk/api/ResourcesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="132" column="0" lean-forward="true" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#642#662#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/ActivityRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="827">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/HelperRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/ActivityResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="99" column="38" lean-forward="true" selection-start-line="99" selection-start-column="38" selection-end-line="99" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-common/2.24.1/jersey-common-2.24.1.jar!/org/glassfish/jersey/internal/AbstractRuntimeDelegate.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+          <folding>
+            <element signature="e#2473#2474#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.24.1/jersey-server-2.24.1.jar!/org/glassfish/jersey/server/model/internal/JavaResourceMethodDispatcherProvider.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="91" column="0" lean-forward="false" selection-start-line="91" selection-start-column="0" selection-end-line="91" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.24.1/jersey-server-2.24.1.jar!/org/glassfish/jersey/server/model/ResourceMethodInvoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="248" column="0" lean-forward="false" selection-start-line="248" selection-start-column="0" selection-end-line="248" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="3" lean-forward="true" selection-start-line="12" selection-start-column="3" selection-end-line="12" selection-end-column="3" />
+        <state relative-caret-position="134">
+          <caret line="102" column="31" lean-forward="false" selection-start-line="102" selection-start-column="31" selection-end-line="102" selection-end-column="31" />
           <folding>
-            <marker date="1481564090998" expanded="true" signature="11466:11495" ph="..." />
+            <marker date="1481580988000" expanded="true" signature="11669:11698" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/HelperResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fkucuk/repository/HelperRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="1" lean-forward="true" selection-start-line="19" selection-start-column="1" selection-end-line="19" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fkucuk/repository/FoodRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="81" column="8" lean-forward="true" selection-start-line="81" selection-start-column="8" selection-end-line="83" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#WHEN_GetFood_SR_Food#0;class#FoodRepositoryTest#0" expanded="false" />
+            <element signature="method#WHEN_GetFood_SR_FoodJSON#0;class#FoodRepositoryTest#0" expanded="false" />
+            <element signature="method#WHEN_NonExistentGetFood_SR_FoodJSON#0;class#FoodRepositoryTest#0" expanded="false" />
+            <element signature="method#WHEN_GetFoodReportFromApi_SR_ReturnRelatedReport#0;class#FoodRepositoryTest#0" expanded="false" />
+            <element signature="method#WHEN_GetFoodReportFromApiForNonExistentFood_SR_ReturnNull#0;class#FoodRepositoryTest#0" expanded="false" />
+            <element signature="method#WHEN_GetNonExistentFood_ShouldBeSaved#0;class#FoodRepositoryTest#0" expanded="false" />
+            <element signature="method#WHEN_GetNonUPCFood_ShouldBeOK#0;class#FoodRepositoryTest#0" expanded="false" />
+            <element signature="method#WHEN_GetUserMeal_SR_NotNull#0;class#FoodRepositoryTest#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/BlockJUnit4ClassRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/runners/ParentRunner.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="202" column="0" lean-forward="false" selection-start-line="202" selection-start-column="0" selection-end-line="202" selection-end-column="0" />
+          <folding>
+            <element signature="e#6429#6593#0" expanded="true" />
+            <element signature="e#6592#6593#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_101/src.zip!/java/util/function/Predicate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="48" column="12" lean-forward="false" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fkucuk/repository/RepositoriesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/FoodSearchResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/ActivitySearchType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/ActivitySearchResult.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="36" lean-forward="false" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+          <folding>
+            <element signature="e#431#432#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.24.1/jersey-server-2.24.1.jar!/org/glassfish/jersey/server/model/internal/AbstractJavaResourceMethodDispatcher.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="87" column="0" lean-forward="false" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/Contact.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/City.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/Nutrient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-221">
+          <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/Measure.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/Activity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="23" lean-forward="true" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding>
+            <element signature="e#380#381#0" expanded="true" />
+            <element signature="e#404#405#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/FoodConsumption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/repository/FoodRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="237" column="0" lean-forward="false" selection-start-line="237" selection-start-column="0" selection-end-line="237" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#getUserMeal#1;class#FoodRepository#0" expanded="false" />
+            <element signature="method#addUserMeal#0;class#FoodRepository#0" expanded="false" />
+            <element signature="method#logUserFood#0;class#FoodRepository#0" expanded="false" />
+            <element signature="method#createUserMeal#0;class#FoodRepository#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/UserResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/glassfish/jersey/core/jersey-server/2.24.1/jersey-server-2.24.1.jar!/org/glassfish/jersey/server/model/internal/ResourceMethodInvocationHandlerFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/FoodResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/fkucuk/model/Food.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="81" column="13" lean-forward="false" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1555#1556#0" expanded="true" />
+            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="e#2778#2779#0" expanded="true" />
+            <element signature="e#2820#2821#0" expanded="true" />
+            <element signature="e#3353#3354#0" expanded="true" />
+            <element signature="e#3393#3394#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/fkucuk/models/ModelsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="105" column="55" lean-forward="false" selection-start-line="105" selection-start-column="55" selection-end-line="105" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

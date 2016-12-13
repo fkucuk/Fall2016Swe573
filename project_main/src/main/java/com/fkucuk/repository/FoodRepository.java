@@ -6,10 +6,15 @@ import com.fkucuk.model.request.FoodLog;
 import org.sql2o.Connection;
 import org.sql2o.Query;
 
+import javax.json.Json;
+import javax.json.JsonObject;
+import javax.json.JsonReader;
+import javax.json.stream.JsonParser;
 import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -86,7 +91,7 @@ public class FoodRepository  {
                 Food food = new Food();
                 food.setFoodId(row.get("foodid").toString());
                 food.setFoodName(row.get("foodname").toString());
-                food.setFoodData(row.get("fooddata").toString());
+                food.setFoodData((JsonObject) row.get("fooddata"));
 
                 FoodUnit foodUnit = new FoodUnit();
                 foodUnit.setName(row.get("symbol").toString());
@@ -217,7 +222,7 @@ public class FoodRepository  {
 
     }
 
-    public String getFoodReportFromUSDA(String foodId) {
+    public JsonObject getFoodReportFromUSDA(String foodId) {
         Client client = ClientBuilder.newClient();
 
         Response response = client.target("http://api.nal.usda.gov/ndb")
@@ -227,9 +232,16 @@ public class FoodRepository  {
                 .queryParam("type", "f")
                 .queryParam("format", "json")
                 .request(MediaType.TEXT_PLAIN_TYPE)
+                .accept(MediaType.APPLICATION_JSON)
+                .header("content-type", MediaType.APPLICATION_JSON)
                 .get(Response.class);
-        if (response.getStatusInfo().equals(Response.Status.OK))
-            return response.readEntity(String.class);
+        if (response.getStatusInfo().equals(Response.Status.OK)) {
+            String str =  response.readEntity(String.class);
+            JsonReader jsonReader = Json.createReader(new StringReader(str));
+            JsonObject object = jsonReader.readObject();
+            jsonReader.close();
+            return object;
+        }
         else
             return null;
     }
@@ -241,25 +253,32 @@ public class FoodRepository  {
                 "WHERE FoodId = :foodId";
         try (Connection conn = DbHelper.getSql2o().open()) {
 
-            food = conn.createQuery(sql)
+            List<Map<String, Object>> foodMap = conn.createQuery(sql)
                     .addParameter("foodId", foodId)
-                    .executeAndFetchFirst(Food.class);
+                    .executeAndFetchTable().asList();
+
+            if (foodMap.size() > 0){
+
+                String jsonobj = foodMap.get(0).get("fooddata").toString();
+
+                JsonReader jsonReader = Json.createReader(new StringReader(jsonobj));
+                JsonObject object = jsonReader.readObject();
+                jsonReader.close();
+
+                food = new Food(foodMap.get(0).get("foodid").toString()
+                , foodMap.get(0).get("foodname").toString()
+                ,object);
+            }
+            else {
+
+                JsonObject foodData = getFoodReportFromUSDA(foodId);
+
+                String foodName = helperResource.getFoodNameFromFoodReport(foodData);
+
+                food = new Food(foodId, foodName, foodData);
+                this.saveFood(food);
+            }
         }
-
-        if (food == null) {
-
-            String foodData = getFoodReportFromUSDA(foodId);
-
-            String foodName = helperResource.getFoodNameFromFoodReport(foodData);
-
-            food = new Food();
-            food.setFoodId(foodId);
-            food.setFoodName(foodName);
-            food.setFoodData(foodData);
-
-            this.saveFood(food);
-        }
-
 
         return food;
     }
@@ -272,7 +291,7 @@ public class FoodRepository  {
             conn.createQuery(sql)
                     .addParameter("foodId", food.getFoodId())
                     .addParameter("foodName", food.getFoodName())
-                    .addParameter("foodData", food.getFoodData())
+                    .addParameter("foodData", food.getJsonString())
                     .executeUpdate();
         }
     }

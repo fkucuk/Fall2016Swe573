@@ -4,6 +4,7 @@ import com.fkucuk.model.*;
 import org.junit.Assert;
 import org.junit.Test;
 
+import javax.json.JsonObject;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -29,7 +30,7 @@ public class RepositoriesTest {
     @Test
     public void WHEN_AddValidUser_SHOULDRETURN_PositiveID(){
         User u = new User();
-        u.setName("Test");
+        u.setName("ModelsTest");
         u.setEmail("test@test.com");
 
         u.setHeight(100);
@@ -81,12 +82,6 @@ public class RepositoriesTest {
         Assert.assertTrue(result > 0);
     }
 
-    @Test
-    public void WHEN_GetUserMeal_SR_NotNull(){
-        UserMeal userMeal = foodRepository.getUserMeal(1, 20161209);
-        System.out.println(userMeal.toString());
-        Assert.assertNotNull(userMeal );
-    }
 
     @Test
     public void WHEN_AddUserActivity_SR_ActivityID(){
@@ -136,41 +131,10 @@ public class RepositoriesTest {
         Assert.assertEquals(expecteda.getDescription(), a.getDescription());
     }
 
-    @Test
-    public void WHEN_GetDemoKey_SR_DemoKey(){
-        Assert.assertThat(helperRepository.getUSDAApiKey(), anyOf(is("EE7YTGjjN3J9IoDWjK1OrbE3MlkWWqWVhmmCWEsh")
-                , is("D4q3Mo9WPvxgYzxBwFQRnYEe9zv3cyDkLV4obagr")));
-    }
 
-    @Test
-    public void WHEN_GetFoodReportFromApi_SR_ReturnRelatedReport(){
-        String foodReport = foodRepository.getFoodReportFromUSDA("01009");
-        Assert.assertNotNull(foodReport);
-    }
 
-    @Test
-    public void WHEN_GetFoodReportFromApiForNonExistentFood_SR_ReturnNull(){
-        String foodReport = foodRepository.getFoodReportFromUSDA("-12");
-        Assert.assertNull(foodReport);
-    }
 
-    @Test
-    public void WHEN_GetFood_SR_Food(){
 
-        String foodId ="45121797";
 
-        Food food = foodRepository.getFoodData(foodId);
 
-        Assert.assertEquals(food.getFoodId(), foodId);
-    }
-
-    @Test
-    public void WHEN_GetNonExistentFood_ShouldBeSaved(){
-
-        String foodId ="45046964";
-
-        Food food = foodRepository.getFoodData(foodId);
-
-        Assert.assertEquals(food.getFoodId(), foodId);
-    }
 }
