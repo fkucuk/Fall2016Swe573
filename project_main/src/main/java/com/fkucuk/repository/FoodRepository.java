@@ -3,6 +3,7 @@ package com.fkucuk.repository;
 import com.fkucuk.HelperResource;
 import com.fkucuk.model.*;
 import com.fkucuk.model.request.FoodLog;
+import org.glassfish.jersey.server.Uri;
 import org.sql2o.Connection;
 import org.sql2o.Query;
 
@@ -14,6 +15,7 @@ import javax.ws.rs.client.Client;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +41,7 @@ public class FoodRepository  {
                 .queryParam("sort", "r")
                 .queryParam("max", "100")
                 .queryParam("api_key", helperRepository.getUSDAApiKey())
-                .request(MediaType.TEXT_PLAIN_TYPE)
+                .request(MediaType.APPLICATION_JSON)
                 .get(Response.class);
     }
 

@@ -111,7 +111,6 @@ public class Food {
         this.foodName = foodName;
     }
 
-    @XmlTransient
     public JsonObject getFoodData() {
         return foodData;
     }

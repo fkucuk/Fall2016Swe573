@@ -6,6 +6,7 @@ import com.fkucuk.model.request.FoodLog;
 import com.fkucuk.repository.*;
 
 import javax.ws.rs.*;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -37,12 +38,14 @@ public class UserResource {
 
     @POST
     @Path("{userId}/meals")
+    @Consumes({MediaType.APPLICATION_JSON})
     public void addUserMeal(@PathParam("userId") int userId, FoodLog foodLog){
         foodRepository.logUserFood(userId, foodLog);
     }
 
     @POST
     @Path("{userId}/activity")
+    @Consumes({MediaType.APPLICATION_JSON})
     public Response addUserActivity(@PathParam("userId") int userId, UserActivity userActivity){
         activityRepository.addUserActivity(userActivity);
         return Response.ok().build();

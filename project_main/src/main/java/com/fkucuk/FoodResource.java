@@ -4,10 +4,7 @@ import com.fkucuk.model.Food;
 import com.fkucuk.repository.FoodRepository;
 
 
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.QueryParam;
+import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 
 
@@ -18,7 +15,7 @@ public class FoodResource {
     HelperResource helperResource = new HelperResource();
 
     @GET
-    public Response searchFood(@QueryParam(value = "keyword")  String keyword){
+    public Response searchFood(@QueryParam(value = "keyword") String keyword){
         return foodRepository.searchFood(keyword);
     }
 

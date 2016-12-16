@@ -99,6 +99,7 @@ public class ActivityResource {
 		
 		return Response.ok().entity(activity).build();
 	}
+
 	
 //	@GET
 //	@Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
