@@ -86,17 +86,6 @@ public class UserResource {
     }
 
     @GET
-    @Path("test")
-    public Contact getContact(){
-        List<City> cities = new ArrayList<>();
-        cities.add(new City("Istanbul"));
-        Address[] addresses = {new Address("Long Street 1", "Short Village", cities)};
-        Contact c =new Contact(2, "Bob", Arrays.asList(addresses));
-        return c;
-
-    }
-
-    @GET
     @Path("{userId}/bmi")
     public float getUserBMI(@PathParam("userId") int userId){
         User user = userRepository.getUser(userId);

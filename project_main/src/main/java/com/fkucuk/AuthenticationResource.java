@@ -1,6 +1,5 @@
 package com.fkucuk;
 
-import com.fkucuk.domain.interfaces.repository.IUserRepository;
 import com.fkucuk.repository.UserRepository;
 
 import javax.ws.rs.*;

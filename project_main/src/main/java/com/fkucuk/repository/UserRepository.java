@@ -3,8 +3,9 @@ package com.fkucuk.repository;
 import com.fkucuk.model.*;
 import org.sql2o.Connection;
 
-public class UserRepository {
+public class UserRepository implements com.fkucuk.domain.interfaces.repository.IUserRepository {
 
+    @Override
     public User createUser(User user) {
         String sql = "INSERT INTO User (Email, Name, Password, IsActive, Weight, Height)" +
                 "VALUES (:email, :name, :password, :isActive, :weight, :height)";
@@ -27,6 +28,7 @@ public class UserRepository {
     }
 
 
+    @Override
     public User getUser(int userId) {
         String sql = "SELECT * FROM User WHERE UserId = :userId";
 
@@ -35,6 +37,7 @@ public class UserRepository {
         }
     }
 
+    @Override
     public User updateUser(User user) {
 
         String sql = "UPDATE User SET Name = :name, Password = :password, IsActive = :isActive "+
@@ -56,11 +59,13 @@ public class UserRepository {
 
 
 
+    @Override
     public User getUserByEmail(String email) {
         int userId = getUserIdByEmail(email);
         return this.getUser(userId);
     }
 
+    @Override
     public int getUserIdByEmail(String email){
 
         String sql = "SELECT userId FROM User " +
@@ -73,6 +78,7 @@ public class UserRepository {
         }
     }
 
+    @Override
     public boolean authenticate(String username, String password) {
         return false;
     }

@@ -21,7 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class FoodRepository  {
+public class FoodRepository implements com.fkucuk.domain.interfaces.repository.IFoodRepository {
 
     HelperRepository helperRepository;
     HelperResource helperResource;
@@ -31,6 +31,7 @@ public class FoodRepository  {
         helperResource = new HelperResource();
     }
 
+    @Override
     public Response searchFood(String keyword) {
         Client client = ClientBuilder.newClient();
 
@@ -46,11 +47,13 @@ public class FoodRepository  {
     }
 
 
+    @Override
     public UserMeal getUserMeal(int userId, int mealDay){
         return getUserMeal(userId, mealDay, mealDay);
     }
 
 
+    @Override
     public UserMeal getUserMeal(int userId, int startDay, int endDay){
 
         final String sql = "select * " +
@@ -112,6 +115,7 @@ public class FoodRepository  {
     }
 
 
+    @Override
     public int addUserMeal(int userId, Meal meal) {
 
         final String sqlExists = "SELECT UserMealId FROM UserMeal "+
@@ -167,6 +171,7 @@ public class FoodRepository  {
         return userMealId;
     }
 
+    @Override
     public void logUserFood(int userId, FoodLog foodLog) {
 
         final String sqlExists = "SELECT UserMealId FROM UserMeal " +
@@ -213,6 +218,7 @@ public class FoodRepository  {
     }
 
 
+    @Override
     public int createUserMeal(int userId, int mealTypeId, int day) {
         String sql = "INSERT INTO UserMeal (UserId, MealTypeId, MealDay) " +
                 "VALUES (:userId, :mealTypeId, :mealDay)";
@@ -229,6 +235,7 @@ public class FoodRepository  {
 
     }
 
+    @Override
     public JsonObject getFoodReportFromUSDA(String foodId) {
         Client client = ClientBuilder.newClient();
 
@@ -253,6 +260,7 @@ public class FoodRepository  {
             return null;
     }
 
+    @Override
     public Food getFoodData(String foodId) {
         Food food;
 

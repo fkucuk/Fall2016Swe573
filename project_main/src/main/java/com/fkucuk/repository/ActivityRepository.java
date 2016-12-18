@@ -12,10 +12,11 @@ import java.util.List;
 import java.util.Map;
 
 
-public class ActivityRepository {
+public class ActivityRepository implements com.fkucuk.domain.interfaces.repository.IActivityRepository {
 
 
 
+    @Override
     public int addUserActivity(UserActivity userActivity) {
 
         final String sqlInsert = "INSERT INTO UserActivity (UserId, ActivityId, Duration, Moment) " +
@@ -32,6 +33,7 @@ public class ActivityRepository {
         }
     }
 
+    @Override
     public List<ActivitySearchResult> searchActivities(String keyword) {
         keyword = '%' + keyword + '%';
 
@@ -45,6 +47,7 @@ public class ActivityRepository {
         }
     }
 
+    @Override
     public Activity getActivity(Integer activityId) {
         final String sql = "select ActivityId, Description, Cat3 CalorieBurnPerHour from Activity " +
                 "WHERE ActivityId = :activityId";
@@ -57,6 +60,7 @@ public class ActivityRepository {
         }
     }
 
+    @Override
     public List<UserActivity> getUserActivities(int userId, int day){
         
         List<UserActivity> userActivities = new ArrayList<>();
