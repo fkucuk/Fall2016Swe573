@@ -7,7 +7,7 @@ import com.fkucuk.model.Food;
  */
 public class FoodLog {
     private int userId;
-    private int foodId;
+    private String foodId;
     private float quantity;
     private int unitRef;
     private int day;
@@ -32,11 +32,11 @@ public class FoodLog {
         this.userId = userId;
     }
 
-    public int getFoodId() {
+    public String getFoodId() {
         return foodId;
     }
 
-    public void setFoodId(int foodId) {
+    public void setFoodId(String foodId) {
         this.foodId = foodId;
     }
 

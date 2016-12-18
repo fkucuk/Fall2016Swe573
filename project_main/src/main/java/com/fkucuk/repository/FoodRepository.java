@@ -174,6 +174,8 @@ public class FoodRepository implements com.fkucuk.domain.interfaces.repository.I
     @Override
     public void logUserFood(int userId, FoodLog foodLog) {
 
+        getFoodData(foodLog.getFoodId());
+
         final String sqlExists = "SELECT UserMealId FROM UserMeal " +
                 "WHERE MealTypeId = :mealTypeId " +
                 " AND MealDay = :mealDay AND UserId = :userId";
