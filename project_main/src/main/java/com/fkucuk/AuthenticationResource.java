@@ -5,9 +5,6 @@ import com.fkucuk.repository.UserRepository;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Response;
 
-/**
- * Created by fat on 30.11.2016.
- */
 @Path("auth")
 public class AuthenticationResource {
 
@@ -21,7 +18,7 @@ public class AuthenticationResource {
 
         try {
 
-            // Authenticate the user using the credentials provided
+
             authenticate(username, password);
 
             // Issue a token for the user
