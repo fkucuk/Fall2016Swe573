@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 99.9%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#add-food-panel {
+    margin: 5px 0;
+    height: auto;
+}
+
+#add-food-panel .panel-body>div {
+    margin: 5px 0;
+}
+
+#add-exercise-panel .panel-body>div {
+    margin: 5px 0;
+}
+
+.search-result-list>li {
+    padding: 10px 20px;
+    height: auto;
+}
+
+.search-result-list-exercise>li {
+    padding: 10px 20px;
+    height: auto;
+}
+
+ul.nutrientList>li:nth-child(2n) {
+    background-color: #ddd;
+}
+
+ul.nutrientList>li {
+    margin: 3px 0;
+    font-size: 12px;
+}
+
+ul.nutrientList {
+    list-style: none;
+}
+
+.value-per-measure {
+    font-size: 14px;
+}
+
+.per-tag {
+    color: #9d9d9d;
+}
+
+.day-row {
+    margin: 5px;
+    min-height: 150px;
+    border-width: 1px 1px 1px 1px;
+    border-color: #ccc;
+    border-style: solid;
+    padding: 15px;
+}
+
+.day-container h5 {
+    margin: 5px;
+}
+
+.day-container hr {
+    border-color: #ccc;
+}
+
+.added-food>li {
+    background-color: #fcf2e3;
+    border: 1px solid #fbdcaf;
+}
+
+.added-exercise>li {
+    background-color: #e3fcf9;
+    border: 1px solid #b8f3ef;
+}
+
+.search-result-list>li:hover {
+    background-color: #eee;
+}
+
+.search-result-list-exercise>li:hover {
+    background-color: #eee;
+}
+
+.inline-h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.list-group-item {
+    transition: transform 0.2s ease-out;
+}
