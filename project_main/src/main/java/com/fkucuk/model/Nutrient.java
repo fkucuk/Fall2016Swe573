@@ -51,6 +51,6 @@ public class Nutrient {
     }
 
     public float calculateValue(Measure measure, int quantity){
-        return quantity * (measure.getEqv() * this.getValue() / 100);
+        return (quantity / measure.getQty()) * (measure.getEqv() * this.getValue() / 100);
     }
 }

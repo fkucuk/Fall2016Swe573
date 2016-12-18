@@ -12,8 +12,17 @@ public class FoodLog {
     private int unitRef;
     private int day;
     private int mealTypeRef;
+    private String unit;
 
     public FoodLog(){}
+
+    public String getUnit() {
+        return unit;
+    }
+
+    public void setUnit(String unit) {
+        this.unit = unit;
+    }
 
     public int getUserId() {
         return userId;

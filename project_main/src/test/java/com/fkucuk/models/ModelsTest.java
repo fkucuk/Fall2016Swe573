@@ -21,7 +21,7 @@ public class ModelsTest {
     public void CheckNutrientMeasureCalc(){
         Nutrient n = new Nutrient("Proximates", "Energy", "kcal", 125);
 
-        Measure m = new Measure("Tbsp", 16);
+        Measure m = new Measure("Tbsp", 16, 1);
 
         float actual = n.calculateValue(m, 1);
         Assert.assertEquals(actual, 20, 0);
@@ -32,7 +32,7 @@ public class ModelsTest {
     public void CheckNutrientMeasureCalcDifferentQuantity(){
         Nutrient n = new Nutrient("Proximates", "Energy", "kcal", 125);
 
-        Measure m = new Measure("Tbsp", 16);
+        Measure m = new Measure("Tbsp", 16, 1);
 
         float actual = n.calculateValue(m, 2);
         Assert.assertEquals(actual, 40, 0);

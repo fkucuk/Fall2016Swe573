@@ -5,6 +5,8 @@ import javax.ws.rs.core.GenericEntity;
 import javax.xml.bind.annotation.XmlTransient;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 
 
 public class Food {
@@ -14,13 +16,36 @@ public class Food {
     private JsonObject foodData;
     private List<Measure> measures;
     private List<Nutrient> nutrients;
+    private List<GroupedNutrient> groupedNutrients;
+
     public Food(){}
-    public Food(String foodId, String foodName, JsonObject foodData) {
+
+    public Food(JsonObject foodData, String foodId, String foodName) {
         this.foodId = foodId;
         this.foodName = foodName;
         this.foodData = foodData;
         this.getMeasures();
         this.getNutrients();
+    }
+
+    public List<GroupedNutrient> getGroupedNutrients() {
+        if (groupedNutrients == null){
+            Map<String, List<Nutrient>> groupByGroupMap = nutrients.stream().collect(
+                    Collectors.groupingBy(Nutrient::getGroup));
+
+            groupedNutrients = new ArrayList<>();
+
+            for (Map.Entry<String, List<Nutrient>> entry: groupByGroupMap.entrySet() ) {
+                GroupedNutrient groupedNutrient = new GroupedNutrient(entry.getKey(), entry.getValue());
+                groupedNutrients.add(groupedNutrient);
+            }
+
+        }
+        return groupedNutrients;
+    }
+
+    public void setGroupedNutrients(List<GroupedNutrient> groupedNutrients) {
+        this.groupedNutrients = groupedNutrients;
     }
 
     public List<Measure> getMeasures() {
@@ -37,7 +62,9 @@ public class Food {
                 JsonObject jv2Json = (JsonObject)jv;
                 m_measures.add(new Measure(
                         jv2Json.getString("label")
-                        , (float)jv2Json.getJsonNumber("eqv").doubleValue() )
+                        , (float)jv2Json.getJsonNumber("eqv").doubleValue()
+                        , (float)jv2Json.getJsonNumber("qty").doubleValue()
+                        )
                 );
                 // System.out.println(((JsonObject)jv).getString("label"));
             }
@@ -111,6 +138,7 @@ public class Food {
         this.foodName = foodName;
     }
 
+    @XmlTransient
     public JsonObject getFoodData() {
         return foodData;
     }

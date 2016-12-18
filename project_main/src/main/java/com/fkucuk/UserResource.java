@@ -67,6 +67,25 @@ public class UserResource {
     }
 
     @GET
+    @Path("{userId}/{day}")
+    public Response getUserDay(@PathParam("userId") int userId,
+                                 @PathParam("day") int day){
+
+        UserDay userDay = new UserDay();
+
+        UserMeal userMeal = foodRepository.getUserMeal(userId, day);
+        userDay.setUserMeal(userMeal);
+
+        List<UserActivity> userActivities = activityRepository.getUserActivities(userId, day);
+        userDay.setActivityList(userActivities);
+
+        if (userMeal == null)
+            return Response.status(Response.Status.NOT_FOUND).build();
+        else
+            return Response.ok().entity(userDay).build();
+    }
+
+    @GET
     @Path("test")
     public Contact getContact(){
         List<City> cities = new ArrayList<>();

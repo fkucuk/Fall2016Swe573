@@ -5,11 +5,12 @@ import java.util.Date;
 public class UserActivity {
 
     private int userId;
-    private String userActivityCateory;
+    private String userActivityCategory;
     private Activity activity;
     private Date moment;
     private int duration;
     private float caloriesBurned;
+
     public UserActivity(){}
 
     public int getUserId() {
@@ -32,12 +33,12 @@ public class UserActivity {
         this.activity = activity;
     }
 
-    public String getUserActivityCateory() {
-        return userActivityCateory;
+    public String getUserActivityCategory() {
+        return userActivityCategory;
     }
 
-    public void setUserActivityCateory(String userActivityCateory) {
-        this.userActivityCateory = userActivityCateory;
+    public void setUserActivityCategory(String userActivityCategory) {
+        this.userActivityCategory = userActivityCategory;
     }
 
     public int getDuration() {

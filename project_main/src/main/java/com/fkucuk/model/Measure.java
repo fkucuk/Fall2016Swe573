@@ -6,13 +6,23 @@ package com.fkucuk.model;
 public class Measure {
     private String label;
     private float eqv;
+    private float qty;
 
     public Measure() {
     }
 
-    public Measure(String label, float eqv) {
+    public Measure(String label, float eqv, float qty) {
         this.label = label;
         this.eqv = eqv;
+        this.qty = qty;
+    }
+
+    public float getQty() {
+        return qty;
+    }
+
+    public void setQty(float qty) {
+        this.qty = qty;
     }
 
     public String getLabel() {

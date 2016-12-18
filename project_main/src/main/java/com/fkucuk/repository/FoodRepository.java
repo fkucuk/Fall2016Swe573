@@ -57,7 +57,6 @@ public class FoodRepository  {
                 "from UserMeal um " +
                 "JOIN MealFood mf ON mf.UserMealId = um.UserMealId " +
                 "JOIN Food f ON f.FoodId = mf.FoodId " +
-                "JOIN Unit u ON u.UnitID = mf.UnitRef " +
                 "WHERE um.UserId = :userId \n" +
                 "AND MealDay between :startDay and :endDay";
 
@@ -90,16 +89,22 @@ public class FoodRepository  {
                     m.setFoodConsumptions(foodConsumptions);
                 }
 
-                Food food = new Food();
-                food.setFoodId(row.get("foodid").toString());
-                food.setFoodName(row.get("foodname").toString());
-                food.setFoodData((JsonObject) row.get("fooddata"));
+                String jsonobj = row.get("fooddata").toString();
 
-                FoodUnit foodUnit = new FoodUnit();
-                foodUnit.setName(row.get("symbol").toString());
+                JsonReader jsonReader = Json.createReader(new StringReader(jsonobj));
+                JsonObject object = jsonReader.readObject();
+                jsonReader.close();
+
+                Food food = new Food(object, row.get("foodid").toString(), row.get("foodname").toString());
+//                food.setFoodId(row.get("foodid").toString());
+//                food.setFoodName(row.get("foodname").toString());
+//                food.setFoodData((JsonObject) row.get("fooddata"));
+
+
+                String unit = row.get("unit").toString();
                 float quantity = (Float)(row.get("quantity"));
 
-                foodConsumptions.add( new FoodConsumption(food, quantity, foodUnit));
+                foodConsumptions.add( new FoodConsumption(food, quantity, unit));
 
             }
             return new UserMeal(userId, meals);
@@ -148,7 +153,7 @@ public class FoodRepository  {
                         ) {
                     foodQuery.addParameter("userMealId", userMealId)
                             .addParameter("foodId", f.getFood().getFoodId())
-                            .addParameter("unit", f.getUnit().getName())
+                            .addParameter("unit", f.getUnit())
                             .addParameter("quantity", f.getQuantity())
                             .addToBatch();
                 }
@@ -171,8 +176,8 @@ public class FoodRepository  {
         final String sqlInsert = "INSERT INTO UserMeal (UserId, MealTypeId, MealDay) " +
                 "VALUES (:userId, :mealTypeId, :mealDay)";
 
-        final String sqlFoods = "INSERT INTO MealFood (UserMealId, FoodId, UnitRef, Quantity) " +
-                "VALUES (:userMealId, :foodId, :unitRef, :quantity)";
+        final String sqlFoods = "INSERT INTO MealFood (UserMealId, FoodId, Unit, Quantity) " +
+                "VALUES (:userMealId, :foodId, :unit, :quantity)";
 
         Integer userMealId;
 
@@ -197,7 +202,7 @@ public class FoodRepository  {
             conn.createQuery(sqlFoods)
                     .addParameter("userMealId", userMealId)
                     .addParameter("foodId", foodLog.getFoodId())
-                    .addParameter("unitRef", foodLog.getUnitRef())
+                    .addParameter("unit", foodLog.getUnit())
                     .addParameter("quantity", foodLog.getQuantity())
                     .executeUpdate();
 //            conn.commit();
@@ -267,17 +272,17 @@ public class FoodRepository  {
                 JsonObject object = jsonReader.readObject();
                 jsonReader.close();
 
-                food = new Food(foodMap.get(0).get("foodid").toString()
-                , foodMap.get(0).get("foodname").toString()
-                ,object);
+                food = new Food(object
+                     , foodMap.get(0).get("foodid").toString()
+                     , foodMap.get(0).get("foodname").toString()
+                );
             }
             else {
 
                 JsonObject foodData = getFoodReportFromUSDA(foodId);
-
                 String foodName = helperResource.getFoodNameFromFoodReport(foodData);
 
-                food = new Food(foodId, foodName, foodData);
+                food = new Food(foodData, foodId, foodName);
                 this.saveFood(food);
             }
         }

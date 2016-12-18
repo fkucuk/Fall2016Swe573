@@ -63,12 +63,7 @@ public class RepositoriesTest {
         f.setFoodName("TESTFood");
 
 
-        FoodUnit fu = new FoodUnit();
-        fu.setName("gr");
-
-
-
-        FoodConsumption fc = new FoodConsumption(f, 150, fu);
+        FoodConsumption fc = new FoodConsumption(f, 150, "gr");
 
         foodConsumptions.add(fc);
         m.setFoodConsumptions(foodConsumptions);

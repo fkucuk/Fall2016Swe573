@@ -12,7 +12,6 @@ import javax.ws.rs.core.Response;
 public class FoodResource {
 
     FoodRepository foodRepository = new FoodRepository();
-    HelperResource helperResource = new HelperResource();
 
     @GET
     public Response searchFood(@QueryParam(value = "keyword") String keyword){
@@ -28,7 +27,11 @@ public class FoodResource {
         if (food == null){
             Response.noContent().build();
         }
-        return Response.ok().entity(food).build();
+        return Response.ok().entity(food)
+                .header("Access-Control-Allow-Origin", "*")
+                .header("Access-Control-Allow-Methods", "GET, POST, DELETE, PUT")
+                .allow("OPTIONS")
+                .build();
     }
 
 
