@@ -1,5 +1,6 @@
 * {
     box-sizing: border-box;
+    letter-spacing: 1px;
 }
 
 html, body {
@@ -95,4 +96,12 @@ ul.nutrientList {
 
 .list-group-item {
     transition: transform 0.2s ease-out;
+}
+.account-wrap, .bmi{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+}
+#weight, #height, #email, #name{
+  font-size: 20px;
 }
