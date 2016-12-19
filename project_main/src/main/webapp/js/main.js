@@ -432,7 +432,15 @@ function dateChangeHandler() {
         $('.day-container').fadeOut();
         $('.day-container[data-date="' + $newDate + '"]').fadeIn();
       }*/
-
+      function exerciseItemGenerate(label, amount){
+          $item = $('.food-li-template').clone();
+          $item.css('display', 'block');
+          $item.attr('class', 'list-group-item');
+          $item.attr('data-minutes', amount);
+          $perTag = $item.find('.per-tag').text(amount+' minutes').detach();
+          $item.find('.food-label').toggleClass('food-label').addClass('exercise-label').text(label+'  ').append($perTag);
+          return $item;
+      }
     function foodItemGenerate(label, amount, unit) {
       $item = $('.food-li-template').clone();
       $item.css('display', 'block');
@@ -477,7 +485,12 @@ function dateChangeHandler() {
       $newDay.find('.snack').find('.added-food').append(
         foodItemGenerate($label, $amount, $unit));
     });
-
+      $.each(res.activityList, function(ind, obj){
+          $activity = obj.activity;
+          $label = $activity.description;
+          $duration = obj.duration;
+          $newDay.find('.added-exercise').append(exerciseItemGenerate($label, $duration));
+      });
     // console.log($newDate);
     // console.log(today.toDateString());
   }
@@ -640,7 +653,7 @@ $(document).on('click', '.search-result-list-exercise li', function(e) {
 
   $element = $(this);
   $val = $(this).text();
-  $dbid = $(this).attr('data-food-db-no');
+  $dbid = $(this).attr('data-activity-id');
 
   if ($element.find('.divtoexpand').length == 0) {
       //console.log($dbid);
@@ -710,7 +723,7 @@ $(document).on('click', '.search-result-list-exercise li', function(e) {
             var addedActivity = {
                 userId: 1,
                 duration: $activityMin,
-                moment: new Date(),
+                moment: currentDate,
                 activity : {
                     activityId: $activityId
                 }
@@ -718,16 +731,17 @@ $(document).on('click', '.search-result-list-exercise li', function(e) {
             };
 
 
+
             $.ajax({
               type: "POST",
                 contentType: "application/json; charset=utf-8",
+                url: exerciseSubmitUrl,
                 dataType: "json",
-              url: exerciseSubmitUrl,
-              data:  JSON.stringify(addedActivity),
-              success: function(res) {
+                data:  JSON.stringify(addedActivity),
+                success: function(res) {
                 addByDom();
-              },
-              error: function(results) {
+                },
+                error: function(results) {
                 $.notify({
                   message: 'There was an error while adding the activity.'
                 }, {
@@ -758,7 +772,7 @@ $(document).on('click', '.search-result-list-exercise li', function(e) {
               '.list-group-item').css('transform', 'scale(1)');
           }
 
-          $liItem.find('.divtoexpand').slideUp();
+          $item.find('.divtoexpand').slideUp();
         }
         /* ========================^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^====================== */
         /* ========================|||||||||||-------ADD ITEM TO DAY----------||||||||||||====================== */

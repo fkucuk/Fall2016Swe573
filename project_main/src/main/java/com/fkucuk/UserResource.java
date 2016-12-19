@@ -46,9 +46,8 @@ public class UserResource {
     @POST
     @Path("{userId}/activity")
     @Consumes({MediaType.APPLICATION_JSON})
-    public Response addUserActivity(@PathParam("userId") int userId, UserActivity userActivity){
+    public void addUserActivity(@PathParam("userId") int userId, UserActivity userActivity){
         activityRepository.addUserActivity(userActivity);
-        return Response.ok().build();
     }
 
     @GET
@@ -87,7 +86,7 @@ public class UserResource {
 
     @GET
     @Path("{userId}/bmi")
-    public float getUserBMI(@PathParam("userId") int userId){
+    public BMI getUserBMI(@PathParam("userId") int userId){
         User user = userRepository.getUser(userId);
         return new HelperResource().calculateBmi(user.getHeight(), user.getWeight());
     }

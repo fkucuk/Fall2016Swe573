@@ -9,9 +9,6 @@ import org.junit.Test;
 
 import java.util.OptionalDouble;
 
-/**
- * Created by fat on 13.12.2016.
- */
 public class ModelsTest {
 
     FoodRepository foodRepository = new FoodRepository();

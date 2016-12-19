@@ -1,6 +1,7 @@
 package com.fkucuk.model;
 
 
+import javax.xml.bind.annotation.XmlTransient;
 import java.util.Date;
 import java.util.List;
 
@@ -70,6 +71,7 @@ public class User {
 		this.email = email;
 	}
 
+	@XmlTransient
 	public String getPassword() {
 		return password;
 	}

@@ -1,6 +1,7 @@
 package com.fkucuk.api;
 
 import com.fkucuk.HelperResource;
+import com.fkucuk.model.BMI;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -20,8 +21,8 @@ public class ResourcesTest {
 
     @Test
     public void WHEN_CalculateBMI_SHOULD_BeCorrect(){
-        float result  = hr.calculateBmi(187, 95);
-        Assert.assertEquals(27.16692, result, 0.05);
+        BMI result  = hr.calculateBmi(187, 95);
+        Assert.assertEquals(27.16692, result.getValue(), 0.05);
     }
 
     @Test
