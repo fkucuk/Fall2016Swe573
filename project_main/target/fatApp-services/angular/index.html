@@ -1,0 +1,365 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="fatApp">
+
+<head>
+
+    <title>FatApp</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css\style.css"/>
+    <script src="js\lib\angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js\lib\jquery-3.1.1.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+    <script src="js\app.js"></script>
+    <script src="js\utils.js"></script>
+</head>
+
+<body ng-controller="DaysMealsController">
+<div class="container-fluid">
+    <div class="row">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">FatApp</a>
+                </div>
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="report.html">My Stats</a></li>
+                    <li><a href="#">My Account</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>
+<div class="container content">
+    <div class="row" style="">
+        <div class="col-sm-12 col-md-6">
+            <button class="btn btn-default btn-sm prev-day-button" ng-click="goToPreviousDay()"> Previous day</button>
+            <input type="text" id="textDatepicker" placeholder="dd.MM.yyyy"
+                   style=" font-size:1.5vmax;">
+            <button class="btn btn-default btn-sm next-day-button" ng-click="gotoNextDay()"> Next day</button>
+        </div>
+    </div>
+
+    <div class="row day-container-template" style="">
+        <div class="col-md-8 day-row breakfast">
+            <span class="inline-h4">Breakfast</span>
+            <button class="btn btn-default add-food-button"> Add Food</button>
+
+            <hr/>
+
+            <ul class="col-md-12 added-food">
+                <li ng-repeat="item in breakfast.foodConsumptions" class="list-group-item food-li-template"
+                    data-food-db-no=""
+                    data-amount="" data-unit=""
+                    data-label="" style="transform: scale(1); ">
+                    <i class="fa fa-cutlery" style="padding: 5px;"></i>
+                    <span class="food-label" style="display: inline-block; width: 80%;"> {{item.food.name}}
+      <span class="per-tag">{{item.quantity}} {{item.unit}}</span>
+    </span>
+                    <span class="pull-right glyphicon glyphicon-remove food-saved-remove"></span>
+                </li>
+
+            </ul>
+            <div class="col-md-12 form-panel" id="add-food-panel-B" style="">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Add food to meal
+                        <span class="pull-right glyphicon glyphicon-remove close-food-panel"></span>
+                    </div>
+                    <div class="panel-body">
+                        <div class="col-sm-8">
+                            <input type="text" ng-model="keywordB" class="form-control" id="food-search-input-B"
+                                   placeholder="Type to search">
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="btn btn-primary" id='search-button-B'
+                                    ng-click="searchFood($event, keywordB, 1)">Search food
+                            </button>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="search-result-panel" style="">
+                                <ul class="list-group search-result-list">
+                                    <li ng-repeat="searchResultItem in searchResultB.list.item"
+
+                                        class="list-group-item" data-food-db-no="">
+                                        <i class="fa fa-cutlery" style="padding: 5px;"></i>
+                                        <span  ng-click="showNutritients(searchResultItem.ndbno)" class="food-label" style="display: inline-block; width: 80%;">
+                                          {{searchResultItem.name}}  </span>
+
+                                        <ul class="divtoexpand"
+                                            style="background-color: rgb(243, 243, 243); padding: 15px; color: rgb(49, 53, 52); margin: 10px 0px 0px;">
+
+
+                                            <div class="col-sm-3"><strong>Amount:</strong></div>
+                                            <div class="col-sm-3">
+                                                <input class="form-control amount-selection"
+                                                       ng-model="selectedMeasure.qty"
+                                                       ng-change="updateFoodMeasure()"
+                                                       value="{{selectedMeasure.qty}}" type="text">
+                                            </div>
+                                            <div class="col-sm-3">
+                                                <select class="form-control unit-selection"
+                                                        ng-model="selectedMeasure.label">
+                                                  <option ng-repeat="u in currentFood.measures" value="{{u.label}}">{{u.label}}</option>
+                                                </select>
+                                            </div>
+
+
+                                            <div class="col-sm-3">
+                                                <button class="btn btn-sm btn-primary"
+                                                        ng-click="addSelectedFood()"
+                                                >Add Food</button>
+                                            </div>
+                                            <br>
+                                            <hr />
+                                            <h5> Nutrients </h5>
+
+                                            <table><tr colspan="5"><td>Proximates</td></tr><tr><td>Energy</td><td>48</td><td>kcal</td></tr><tr><td>Carbohydrate, by difference</td><td>12.35</td><td>g</td></tr><tr><td>Sugars, total</td><td>12.35</td><td>g</td></tr><tr colspan="5"><td>Minerals</td></tr><tr><td>Potassium, K</td><td>14</td><td>mg</td></tr><tr><td>Sodium, Na</td><td>18</td><td>mg</td></tr><tr colspan="5"><td>Vitamins</td></tr><tr><td>Vitamin C, total ascorbic acid</td><td>23.9</td><td>mg</td></tr></table>
+                                            <!--<ul class="nutrientList">-->
+                                                <!--<li><strong>Water</strong> : <span-->
+                                                        <!--class="value-per-measure">{{spsp}}</span>-->
+                                                    <!--<span class="per-tag">/per 1 serving</span></li>-->
+                                                <!--<li><strong>Energy</strong> : <span-->
+                                                        <!--class="value-per-measure">340kcal</span>-->
+                                                    <!--<span class="per-tag">/per 1 serving</span></li>-->
+                                                <!--<li><strong>Protein</strong> : <span-->
+                                                        <!--class="value-per-measure">11.36g</span>-->
+                                                    <!--<span class="per-tag">/per 1 serving</span></li>-->
+                                                <!--<li><strong>Total lipid (fat)</strong> : <span-->
+                                                        <!--class="value-per-measure">20.56g</span> <span-->
+                                                        <!--class="per-tag">/per 1 serving</span>-->
+                                                <!--</li>-->
+                                                <!--<li><strong>Carbohydrate, by difference</strong> : <span-->
+                                                        <!--class="value-per-measure">27.32g</span> <span-->
+                                                        <!--class="per-tag">/per 1 serving</span>-->
+                                                <!--</li>-->
+                                                <!--<li><strong>Fiber, total dietary</strong> : <span-->
+                                                        <!--class="value-per-measure">1.9g</span> <span-->
+                                                        <!--class="per-tag">/per 1 serving</span>-->
+                                                <!--</li>-->
+                                                <!--<li><strong>Sugars, total</strong> : <span-->
+                                                        <!--class="value-per-measure">4.95g</span> <span-->
+                                                        <!--class="per-tag">/per 1 serving</span>-->
+                                                <!--</li>-->
+                                                <!--<li><strong>Calcium, Ca</strong> : <span-->
+                                                        <!--class="value-per-measure">254mg</span>-->
+                                                    <!--<span class="per-tag">/per 1 serving</span></li>-->
+                                                <!--<li><strong>Iron, Fe</strong> : <span-->
+                                                        <!--class="value-per-measure">1mg</span> <span-->
+                                                        <!--class="per-tag">/per 1 serving</span></li>-->
+                                                <!--<li><strong>Magnesium, Mg</strong> : <span class="value-per-measure">30mg</span>-->
+                                                    <!--<span class="per-tag">/per 1 serving</span></li>-->
+                                                <!--<li><strong>Phosphorus, P</strong> : <span-->
+                                                        <!--class="value-per-measure">354mg</span> <span-->
+                                                        <!--class="per-tag">/per 1 serving</span>-->
+                                                <!--</li>-->
+                                                <!--<li><strong>Potassium, K</strong> : <span class="value-per-measure">222mg</span>-->
+                                                    <!--<span class="per-tag">/per 1 serving</span></li>-->
+                                                <!--<li><strong>Sodium, Na</strong> : <span-->
+                                                        <!--class="value-per-measure">656mg</span>-->
+                                                    <!--<span class="per-tag">/per 1 serving</span></li>-->
+                                                <!--<li><strong>Zinc, Zn</strong> : <span-->
+                                                        <!--class="value-per-measure">1.45mg</span>-->
+                                                    <!--<span class="per-tag">/per 1 serving</span></li>-->
+                                                <!--<li><strong>Thiamin</strong> : <span-->
+                                                        <!--class="value-per-measure">0.17mg</span>-->
+                                                    <!--<span class="per-tag">/per 1 serving</span></li>-->
+                                                <!--<li><strong>Riboflavin</strong> : <span-->
+                                                        <!--class="value-per-measure">0.43mg</span>-->
+                                                    <!--<span class="per-tag">/per 1 serving</span></li>-->
+                                                <!--<li><strong>Niacin</strong> : <span-->
+                                                        <!--class="value-per-measure">1.24mg</span>-->
+                                                    <!--<span class="per-tag">/per 1 serving</span></li>-->
+                                                <!--<li><strong>Vitamin B-6</strong> : <span class="value-per-measure">0.11mg</span>-->
+                                                    <!--<span class="per-tag">/per 1 serving</span></li>-->
+                                                <!--<li><strong>Vitamin B-12</strong> : <span-->
+                                                        <!--class="value-per-measure">0.33µg</span> <span-->
+                                                        <!--class="per-tag">/per 1 serving</span>-->
+                                                <!--</li>-->
+                                                <!--<li><strong>Vitamin A, RAE</strong> : <span-->
+                                                        <!--class="value-per-measure">107µg</span> <span-->
+                                                        <!--class="per-tag">/per 1 serving</span>-->
+                                                <!--</li>-->
+                                                <!--<li><strong>Vitamin A, IU</strong> : <span-->
+                                                        <!--class="value-per-measure">402IU</span> <span-->
+                                                        <!--class="per-tag">/per 1 serving</span>-->
+                                                <!--</li>-->
+                                                <!--<li><strong>Vitamin E (alpha-tocopherol)</strong> : <span-->
+                                                        <!--class="value-per-measure">1.28mg</span> <span-->
+                                                        <!--class="per-tag">/per 1 serving</span>-->
+                                                <!--</li>-->
+                                                <!--<li><strong>Fatty acids, total saturated</strong> : <span-->
+                                                        <!--class="value-per-measure">7.31g</span> <span-->
+                                                        <!--class="per-tag">/per 1 serving</span>-->
+                                                <!--</li>-->
+                                                <!--<li><strong>Fatty acids, total monounsaturated</strong> : <span-->
+                                                        <!--class="value-per-measure">4.92g</span> <span-->
+                                                        <!--class="per-tag">/per 1 serving</span>-->
+                                                <!--</li>-->
+                                                <!--<li><strong>Fatty acids, total polyunsaturated</strong> : <span-->
+                                                        <!--class="value-per-measure">6.9g</span> <span-->
+                                                        <!--class="per-tag">/per 1 serving</span>-->
+                                                <!--</li>-->
+                                                <!--<li><strong>Fatty acids, total trans</strong> : <span-->
+                                                        <!--class="value-per-measure">0.39g</span>-->
+                                                    <!--<span class="per-tag">/per 1 serving</span></li>-->
+                                                <!--<li><strong>Cholesterol</strong> : <span-->
+                                                        <!--class="value-per-measure">32mg</span>-->
+                                                    <!--<span class="per-tag">/per 1 serving</span></li>-->
+                                            <!--</ul>-->
+
+
+                                            </li>
+                                        </ul>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8 day-row lunch">
+            <span class="inline-h4">Lunch</span>
+            <button class="btn btn-default add-food-button"> Add Food</button>
+            <hr/>
+
+            <div class="col-md-12 form-panel" id="add-food-panel-L" style="">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Add food to meal
+                        <span class="pull-right glyphicon glyphicon-remove close-food-panel"></span></div>
+                    <div class="panel-body">
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="food-search-input" placeholder="Type to search">
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="btn btn-primary" id='search-button'>Search food</button>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="search-result-panel" style="">
+                                <ul class="list-group search-result-list">
+                                    <!--Food search content comes here -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="col-md-12 added-food"></ul>
+        </div>
+        <div class="col-md-8 day-row dinner">
+            <span class="inline-h4">Dinner</span>
+            <button class="btn btn-default add-food-button"> Add Food</button>
+            <hr/>
+
+            <div class="col-md-12 form-panel" id="add-food-panel-D" style="">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Add food to meal
+                        <span class="pull-right glyphicon glyphicon-remove close-food-panel"></span></div>
+                    <div class="panel-body">
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="food-search-input" placeholder="Type to search">
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="btn btn-primary" id='search-button'>Search food</button>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="search-result-panel" style="">
+                                <ul class="list-group search-result-list">
+                                    <!--Food search content comes here -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="col-md-12 added-food"></ul>
+        </div>
+        <div class="col-md-8 day-row snack">
+            <span class="inline-h4">Snack</span>
+            <button class="btn btn-default add-food-button"> Add Food</button>
+            <hr/>
+
+            <div class="col-md-12 form-panel" id="add-food-panel-S" style="">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Add food to meal
+                        <span class="pull-right glyphicon glyphicon-remove close-food-panel"></span></div>
+                    <div class="panel-body">
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="food-search-input" placeholder="Type to search">
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="btn btn-primary" id='search-button'>Search food</button>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="search-result-panel" style="">
+                                <ul class="list-group search-result-list">
+                                    <!--Food search content comes here -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="col-md-12 added-food"></ul>
+        </div>
+
+        <div class="col-md-8 day-row exercise">
+            <span class="inline-h4">Activity</span>
+            <button class="btn btn-default add-exercise">Add Activity</button>
+            <hr/>
+            <ul class="col-md-12 added-exercise">
+                <!--added exercise comes here -->
+            </ul>
+            <div class="col-md-12 form-panel" id="add-exercise-panel" style="">
+                <div class="panel panel-primary">
+                    <div class="panel-heading"> Add Activity
+                        <span class="pull-right glyphicon glyphicon-remove close-exercise-panel"></span></div>
+                    <div class="panel-body">
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" id="exercise-search-input"
+                                   placeholder="Type to search">
+                        </div>
+                        <div class="col-sm-4">
+                            <button class="btn btn-primary" id='search-button'>Search Activities</button>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="search-result-panel-exercise" style="">
+                                <ul class="list-group search-result-list-exercise">
+                                    <!--exercise search content comes here -->
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+
+<!--================================== TEMLATES ===========================-->
+
+
+</div>
+
+<!--================================== TEMLATES ===========================-->
+
+</body>
+<!--<link rel="stylesheet" href="js\lib\bootstrap-notify-3.1.3/animate.css">-->
+
+<!--<script src="js\lib\bootstrap-notify-3.1.3/bootstrap-notify.min.js"></script>-->
+<!--<script src="js\main.js"></script>-->
+
+</html>
