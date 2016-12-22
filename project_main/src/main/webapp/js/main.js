@@ -20,6 +20,24 @@ function getFormattedDate() {
   return (currentDate.getFullYear() + ('0' + (currentDate.getMonth() + 1)).slice(-
     2) + ('0' + currentDate.getDate()).slice(-2));
 }
+
+function getMealTypeRef(mealName){
+  switch (mealName.toLowerCase()){
+      case "breakfast":
+        return 1;
+        break;
+      case "lunch":
+          return 2;
+          break;
+      case "dinner":
+          return 3;
+          break;
+      case "snack":
+          return 4;
+          break;
+  }
+}
+
 historyArray = [];
 futureArray = [];
 
@@ -281,8 +299,7 @@ function addFoodToMeal(e) {
   $unit = $item.find('.unit-selection').val();
   $amount = $item.find('.amount-selection').val();
 
-console.log($mealContainer);
-
+var mealTypeRef = getMealTypeRef($mealContainer.children('span').text());
 
     var logFoodObject = {
         userId: 1,
@@ -290,7 +307,7 @@ console.log($mealContainer);
         quantity: $amount,
         unit: $unit,
         day: getFormattedDate(),
-        mealTypeRef: 1
+        mealTypeRef: mealTypeRef
     };
 
 
